@@ -27,7 +27,6 @@
 		5ECB2E302360311D00A935A6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E2F2360311D00A935A6 /* API.swift */; };
 		5ECB2E322360316E00A935A6 /* HomeApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E312360316E00A935A6 /* HomeApiManager.swift */; };
 		5ECB2E342360318800A935A6 /* MineApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E332360318800A935A6 /* MineApiManager.swift */; };
-		5ECB2E36236031A300A935A6 /* Response+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E35236031A300A935A6 /* Response+ObjectMapper.swift */; };
 		5ECB2E39236031FC00A935A6 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E38236031FC00A935A6 /* MineViewController.swift */; };
 		5ECB2E3C2360357D00A935A6 /* CommonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E3A2360357C00A935A6 /* CommonAPI.swift */; };
 		5ECB2E3D2360357D00A935A6 /* BFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E3B2360357D00A935A6 /* BFRequest.swift */; };
@@ -38,6 +37,7 @@
 		5ECB2E4D23604C4000A935A6 /* MessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E4C23604C4000A935A6 /* MessageRequest.swift */; };
 		5ECB2E4F23604C8800A935A6 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E4E23604C8800A935A6 /* MessageModel.swift */; };
 		5ECB2E5123604CA400A935A6 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E5023604CA400A935A6 /* MessageTableViewCell.swift */; };
+		5ECB2E552360578200A935A6 /* JSONMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E542360578200A935A6 /* JSONMappable.swift */; };
 		909161E8F52EF8BDFC00E066 /* Pods_Mall_MallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417833ABFEF59ED9D54CE139 /* Pods_Mall_MallUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +86,6 @@
 		5ECB2E2F2360311D00A935A6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5ECB2E312360316E00A935A6 /* HomeApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiManager.swift; sourceTree = "<group>"; };
 		5ECB2E332360318800A935A6 /* MineApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineApiManager.swift; sourceTree = "<group>"; };
-		5ECB2E35236031A300A935A6 /* Response+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+ObjectMapper.swift"; sourceTree = "<group>"; };
 		5ECB2E38236031FC00A935A6 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		5ECB2E3A2360357C00A935A6 /* CommonAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAPI.swift; sourceTree = "<group>"; };
 		5ECB2E3B2360357D00A935A6 /* BFRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFRequest.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		5ECB2E4C23604C4000A935A6 /* MessageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRequest.swift; sourceTree = "<group>"; };
 		5ECB2E4E23604C8800A935A6 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		5ECB2E5023604CA400A935A6 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		5ECB2E542360578200A935A6 /* JSONMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMappable.swift; sourceTree = "<group>"; };
 		66F6E1D38081772885546665 /* Pods-Mall-MallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall-MallUITests.release.xcconfig"; path = "Target Support Files/Pods-Mall-MallUITests/Pods-Mall-MallUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8F13CF82451CC28A041AC716 /* Pods_Mall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55E0D7825587681584A35D2 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -274,7 +274,7 @@
 		5ECB2E1C23602BB600A935A6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5ECB2E35236031A300A935A6 /* Response+ObjectMapper.swift */,
+				5ECB2E542360578200A935A6 /* JSONMappable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -634,6 +634,7 @@
 				5ECB2E2323602BD800A935A6 /* SStatus.swift in Sources */,
 				5ECB2E3D2360357D00A935A6 /* BFRequest.swift in Sources */,
 				5ECB2DD2236025D600A935A6 /* ViewController.swift in Sources */,
+				5ECB2E552360578200A935A6 /* JSONMappable.swift in Sources */,
 				5ECB2E4B23604C1F00A935A6 /* MessageViewModel.swift in Sources */,
 				5ECB2E5123604CA400A935A6 /* MessageTableViewCell.swift in Sources */,
 				5ECB2E2723602CEA00A935A6 /* HomeTableViewCell.swift in Sources */,
@@ -646,7 +647,6 @@
 				5ECB2E1E23602BB600A935A6 /* HomeViewModel.swift in Sources */,
 				5ECB2E322360316E00A935A6 /* HomeApiManager.swift in Sources */,
 				5ECB2DCE236025D600A935A6 /* AppDelegate.swift in Sources */,
-				5ECB2E36236031A300A935A6 /* Response+ObjectMapper.swift in Sources */,
 				5ECB2E4523604BCB00A935A6 /* MessageViewController.swift in Sources */,
 				5ECB2E3C2360357D00A935A6 /* CommonAPI.swift in Sources */,
 				5ECB2E4F23604C8800A935A6 /* MessageModel.swift in Sources */,

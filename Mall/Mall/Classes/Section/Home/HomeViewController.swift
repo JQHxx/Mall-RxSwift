@@ -27,6 +27,12 @@ class HomeViewController: UIViewController {
         let vmInput = HomeViewModel.HomeInput(request: requestRelay)
         vmOutput = homeViewModel.transform(input: vmInput)
         
+        vmOutput?.homeModel
+            .asObservable()
+            .subscribe(onNext: { (model) in
+                
+            }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: rx.disposeBag)
+        
         vmOutput?.refreshStatus.asObservable().subscribe(onNext: {[weak self] status in
             switch status {
             case .beingHeaderRefresh: break
