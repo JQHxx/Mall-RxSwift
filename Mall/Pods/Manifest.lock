@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.9.0)
+  - Alamofire (4.8.2)
   - Differentiator (3.1.0)
   - Kingfisher (4.10.1)
   - MJRefresh (3.2.0)
@@ -8,9 +8,6 @@ PODS:
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
-  - Moya/RxSwift (13.0.1):
-    - Moya/Core
-    - RxSwift (~> 4.0)
   - "NSObject+Rx (4.4.1)":
     - RxSwift (~> 4.3)
   - ObjectMapper (3.5.1)
@@ -30,7 +27,6 @@ DEPENDENCIES:
   - Kingfisher
   - MJRefresh
   - Moya
-  - Moya/RxSwift
   - "NSObject+Rx"
   - ObjectMapper
   - RxCocoa
@@ -41,9 +37,7 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - SwiftyJSON
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - Differentiator
     - Kingfisher
@@ -57,9 +51,10 @@ SPEC REPOS:
     - RxSwift
     - SnapKit
     - SVProgressHUD
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
@@ -74,6 +69,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 6a21edcdaaa8c98e3da1e314f9735ad3180176bc
+PODFILE CHECKSUM: 90be69d814901c12147c228459a99e4749bb1225
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.7.5

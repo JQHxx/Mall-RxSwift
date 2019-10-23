@@ -16,17 +16,17 @@ class MessageViewModel: NSObject {
 
 extension MessageViewModel: PViewModelType {
 
-    typealias Input = MessageInput
-    typealias Output = MessageOutput
+    typealias PInput = Input
+    typealias POutput = Output
     
-    struct MessageInput {
+    struct Input {
         var request: BehaviorRelay<MessageRequest>
         init(request: BehaviorRelay<MessageRequest>) {
             self.request = request
         }
     }
     
-    struct MessageOutput {
+    struct Output {
         let refreshStatus = BehaviorRelay<SRefreshStatus>(value: .none)
         let requestCommand = PublishSubject<Bool>()
         var datas: Driver<[MessageData]>
@@ -35,12 +35,12 @@ extension MessageViewModel: PViewModelType {
         }
     }
     
-    func transform(input: MessageViewModel.MessageInput) -> MessageViewModel.MessageOutput {
+    func transform(input: MessageViewModel.Input) -> MessageViewModel.Output {
         let datas = messageModels.asObservable().map{ (models) -> [MessageData] in
             return models
         }.asDriver(onErrorJustReturn: [])
 
-        let output = MessageOutput(datas: datas)
+        let output = Output(datas: datas)
         
         input.request.asObservable().subscribe {
             let request = $0.element

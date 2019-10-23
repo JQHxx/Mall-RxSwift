@@ -15,17 +15,17 @@ class HomeViewModel: NSObject {
 
 extension HomeViewModel: PViewModelType {
 
-    typealias Input = HomeInput
-    typealias Output = HomeOutput
+    typealias PInput = Input
+    typealias POutput = Output
     
-    struct HomeInput {
+    struct Input {
         var request: BehaviorRelay<HomeRequest>
         init(request: BehaviorRelay<HomeRequest>) {
             self.request = request
         }
     }
     
-    struct HomeOutput {
+    struct Output {
         let refreshStatus = BehaviorRelay<SRefreshStatus>(value: .none)
         let requestCommand = PublishSubject<Bool>()
         var homeModel: Driver<HomeModel>
@@ -34,9 +34,9 @@ extension HomeViewModel: PViewModelType {
         }
     }
     
-    func transform(input: HomeViewModel.HomeInput) -> HomeViewModel.HomeOutput {
+    func transform(input: HomeViewModel.Input) -> HomeViewModel.Output {
 
-        let output = HomeOutput(model: homeModel.asObservable().asDriver(onErrorJustReturn: HomeModel(JSON.null)))
+        let output = Output(model: homeModel.asObservable().asDriver(onErrorJustReturn: HomeModel(JSON.null)))
         
         input.request.asObservable().subscribe {
             let request = $0.element

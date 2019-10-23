@@ -38,6 +38,7 @@
 		5ECB2E4F23604C8800A935A6 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E4E23604C8800A935A6 /* MessageModel.swift */; };
 		5ECB2E5123604CA400A935A6 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E5023604CA400A935A6 /* MessageTableViewCell.swift */; };
 		5ECB2E552360578200A935A6 /* JSONMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E542360578200A935A6 /* JSONMappable.swift */; };
+		66FE13B72360A17D00A26D10 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */; };
 		909161E8F52EF8BDFC00E066 /* Pods_Mall_MallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417833ABFEF59ED9D54CE139 /* Pods_Mall_MallUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		5ECB2E5023604CA400A935A6 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		5ECB2E542360578200A935A6 /* JSONMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMappable.swift; sourceTree = "<group>"; };
 		66F6E1D38081772885546665 /* Pods-Mall-MallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall-MallUITests.release.xcconfig"; path = "Target Support Files/Pods-Mall-MallUITests/Pods-Mall-MallUITests.release.xcconfig"; sourceTree = "<group>"; };
+		66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		8F13CF82451CC28A041AC716 /* Pods_Mall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55E0D7825587681584A35D2 /* Pods-MallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.debug.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA84CC552D7C04969828FB34 /* Pods-Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.debug.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.debug.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				5ECB2E542360578200A935A6 /* JSONMappable.swift */,
+				66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 			files = (
 				5ECB2E302360311D00A935A6 /* API.swift in Sources */,
 				5ECB2E2323602BD800A935A6 /* SStatus.swift in Sources */,
+				66FE13B72360A17D00A26D10 /* Observable+ObjectMapper.swift in Sources */,
 				5ECB2E3D2360357D00A935A6 /* BFRequest.swift in Sources */,
 				5ECB2DD2236025D600A935A6 /* ViewController.swift in Sources */,
 				5ECB2E552360578200A935A6 /* JSONMappable.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var vmOutput: HomeViewModel.HomeOutput? = nil
+    var vmOutput: HomeViewModel.Output? = nil
     let homeViewModel = HomeViewModel()
     var requestRelay = BehaviorRelay<HomeRequest>.init(value: HomeRequest())
 
@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
         let request = HomeRequest()
         let requestRelay: BehaviorRelay<HomeRequest> = BehaviorRelay<HomeRequest>.init(value: request)
          */
-        let vmInput = HomeViewModel.HomeInput(request: requestRelay)
+        let vmInput = HomeViewModel.Input(request: requestRelay)
         vmOutput = homeViewModel.transform(input: vmInput)
         
         vmOutput?.homeModel

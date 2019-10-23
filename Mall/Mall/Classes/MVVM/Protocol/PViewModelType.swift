@@ -9,8 +9,8 @@
 import Foundation
 
 protocol PViewModelType {
-    associatedtype Input
-    associatedtype Output
+    associatedtype PInput
+    associatedtype POutput
     
-    func transform(input: Input) -> Output
+    func transform(input: PInput) -> POutput
 }
