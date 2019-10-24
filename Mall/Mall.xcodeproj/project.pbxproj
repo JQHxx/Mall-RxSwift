@@ -44,8 +44,10 @@
 		5ED72C1D23613D8200726D09 /* TableViewTest2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C1C23613D8200726D09 /* TableViewTest2VC.swift */; };
 		5ED72C1F23613E8600726D09 /* TableViewTest3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C1E23613E8600726D09 /* TableViewTest3VC.swift */; };
 		5ED72C2123613F6E00726D09 /* TableViewTest4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C2023613F6E00726D09 /* TableViewTest4VC.swift */; };
-		5ED72C232361429900726D09 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C222361429900726D09 /* TableView.swift */; };
 		5ED72C2523614B9000726D09 /* TableViewTest5VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C2423614B9000726D09 /* TableViewTest5VC.swift */; };
+		5ED72C282361525800726D09 /* CollectionViewTest1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C272361525800726D09 /* CollectionViewTest1VC.swift */; };
+		5ED72C2A2361548F00726D09 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C292361548F00726D09 /* MyCollectionViewCell.swift */; };
+		5ED72C2C2361567200726D09 /* MySectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C2B2361567200726D09 /* MySectionHeader.swift */; };
 		66FE13B72360A17D00A26D10 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */; };
 		909161E8F52EF8BDFC00E066 /* Pods_Mall_MallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417833ABFEF59ED9D54CE139 /* Pods_Mall_MallUITests.framework */; };
 /* End PBXBuildFile section */
@@ -112,8 +114,10 @@
 		5ED72C1C23613D8200726D09 /* TableViewTest2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest2VC.swift; sourceTree = "<group>"; };
 		5ED72C1E23613E8600726D09 /* TableViewTest3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest3VC.swift; sourceTree = "<group>"; };
 		5ED72C2023613F6E00726D09 /* TableViewTest4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest4VC.swift; sourceTree = "<group>"; };
-		5ED72C222361429900726D09 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		5ED72C2423614B9000726D09 /* TableViewTest5VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest5VC.swift; sourceTree = "<group>"; };
+		5ED72C272361525800726D09 /* CollectionViewTest1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTest1VC.swift; sourceTree = "<group>"; };
+		5ED72C292361548F00726D09 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		5ED72C2B2361567200726D09 /* MySectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySectionHeader.swift; sourceTree = "<group>"; };
 		66F6E1D38081772885546665 /* Pods-Mall-MallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall-MallUITests.release.xcconfig"; path = "Target Support Files/Pods-Mall-MallUITests/Pods-Mall-MallUITests.release.xcconfig"; sourceTree = "<group>"; };
 		66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		8F13CF82451CC28A041AC716 /* Pods_Mall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,6 +397,7 @@
 		5ED72C1823613CE500726D09 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				5ED72C262361523F00726D09 /* UICollectionView */,
 				5ED72C1923613CFD00726D09 /* UITableView */,
 			);
 			path = Test;
@@ -401,7 +406,6 @@
 		5ED72C1923613CFD00726D09 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				5ED72C222361429900726D09 /* TableView.swift */,
 				5ED72C1A23613D2B00726D09 /* TableViewTest1VC.swift */,
 				5ED72C1C23613D8200726D09 /* TableViewTest2VC.swift */,
 				5ED72C1E23613E8600726D09 /* TableViewTest3VC.swift */,
@@ -409,6 +413,16 @@
 				5ED72C2423614B9000726D09 /* TableViewTest5VC.swift */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		5ED72C262361523F00726D09 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				5ED72C272361525800726D09 /* CollectionViewTest1VC.swift */,
+				5ED72C292361548F00726D09 /* MyCollectionViewCell.swift */,
+				5ED72C2B2361567200726D09 /* MySectionHeader.swift */,
+			);
+			path = UICollectionView;
 			sourceTree = "<group>";
 		};
 		DF83E7EAA0E6D415759AAEEC /* Pods */ = {
@@ -687,7 +701,6 @@
 				5ED72C2123613F6E00726D09 /* TableViewTest4VC.swift in Sources */,
 				5ED72C17236131ED00726D09 /* Reactive+UITableViewCell.swift in Sources */,
 				5ECB2E2723602CEA00A935A6 /* HomeTableViewCell.swift in Sources */,
-				5ED72C232361429900726D09 /* TableView.swift in Sources */,
 				5ECB2E2B23602F6100A935A6 /* ImportHeader.swift in Sources */,
 				5ECB2E2023602BCC00A935A6 /* PViewModelType.swift in Sources */,
 				5ECB2E2E2360307200A935A6 /* TProgressHUD.swift in Sources */,
@@ -696,6 +709,8 @@
 				5ECB2E2923602D0300A935A6 /* HomeModel.swift in Sources */,
 				5ECB2E1E23602BB600A935A6 /* HomeViewModel.swift in Sources */,
 				5ECB2E322360316E00A935A6 /* HomeApiManager.swift in Sources */,
+				5ED72C2C2361567200726D09 /* MySectionHeader.swift in Sources */,
+				5ED72C282361525800726D09 /* CollectionViewTest1VC.swift in Sources */,
 				5ED72C1F23613E8600726D09 /* TableViewTest3VC.swift in Sources */,
 				5ECB2DCE236025D600A935A6 /* AppDelegate.swift in Sources */,
 				5ECB2E4523604BCB00A935A6 /* MessageViewController.swift in Sources */,
@@ -703,6 +718,7 @@
 				5ECB2E4F23604C8800A935A6 /* MessageModel.swift in Sources */,
 				5ECB2E2523602CBD00A935A6 /* HomeViewController.swift in Sources */,
 				5ECB2E3F2360360D00A935A6 /* MoyaNetwork.swift in Sources */,
+				5ED72C2A2361548F00726D09 /* MyCollectionViewCell.swift in Sources */,
 				5ECB2E422360413A00A935A6 /* HomeRequest.swift in Sources */,
 				5ED72C152361319600726D09 /* CellButtonTriggerble.swift in Sources */,
 				5ECB2E39236031FC00A935A6 /* MineViewController.swift in Sources */,
