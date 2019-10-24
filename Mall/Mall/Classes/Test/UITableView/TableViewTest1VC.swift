@@ -11,6 +11,13 @@ import UIKit
 // MARK: - 使用自带的Section
 class TableViewTest1VC: UIViewController {
 
+    // 创建数据源
+    private let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, String>>(configureCell: {(dataSource, tableView, indexPath, element) -> UITableViewCell in
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+                  cell.textLabel?.text = "\(indexPath.row)：\(element)"
+                  return cell
+    })
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -23,12 +30,10 @@ class TableViewTest1VC: UIViewController {
             make.edges.equalToSuperview()
         }
         
-        // 创建数据源
-        let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, String>>(configureCell: {(dataSource, tableView, indexPath, element) -> UITableViewCell in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-                      cell.textLabel?.text = "\(indexPath.row)：\(element)"
-                      return cell
-        })
+        tableView.rx.setDelegate(self)
+        .disposed(by: disposeBag)
+        
+
         
         
         // 模型点击事件
@@ -70,4 +75,12 @@ class TableViewTest1VC: UIViewController {
         ])
     let disposeBag = DisposeBag()
 
+}
+
+extension TableViewTest1VC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let str = dataSource.sectionModels[indexPath.section].items[indexPath.row]
+        debugPrint(str)
+        return 200
+    }
 }

@@ -7,9 +7,3 @@
 //
 
 import Foundation
-
-/**
- 不足
- 1、无法设置行高(cell height & sectionHeader height   sectionFooter height)
- 2、无法自定于section header or footer
- */

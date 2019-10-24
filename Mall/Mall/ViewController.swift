@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let homeVC = MessageViewController()
+        let homeVC = TableViewTest1VC()
         self.present(homeVC, animated: true, completion: nil)
     }
 
