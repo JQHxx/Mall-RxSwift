@@ -9,6 +9,6 @@
 import Foundation
 
 protocol CellButtonTriggerble: NSObjectProtocol {
-    var triggerButton:UIButton{get}
-    var canTrigger:Bool{get set}
+    var triggerButton: UIButton{ get }
+    var canTrigger: Bool{ get set }
 }

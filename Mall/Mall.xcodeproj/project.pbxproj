@@ -39,7 +39,7 @@
 		5ECB2E5123604CA400A935A6 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E5023604CA400A935A6 /* MessageTableViewCell.swift */; };
 		5ECB2E552360578200A935A6 /* JSONMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E542360578200A935A6 /* JSONMappable.swift */; };
 		5ED72C152361319600726D09 /* CellButtonTriggerble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C142361319600726D09 /* CellButtonTriggerble.swift */; };
-		5ED72C17236131ED00726D09 /* Reactive+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C16236131ED00726D09 /* Reactive+UITableViewCell.swift */; };
+		5ED72C17236131ED00726D09 /* Reactive+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C16236131ED00726D09 /* Reactive+Events.swift */; };
 		5ED72C1B23613D2B00726D09 /* TableViewTest1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C1A23613D2B00726D09 /* TableViewTest1VC.swift */; };
 		5ED72C1D23613D8200726D09 /* TableViewTest2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C1C23613D8200726D09 /* TableViewTest2VC.swift */; };
 		5ED72C1F23613E8600726D09 /* TableViewTest3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C1E23613E8600726D09 /* TableViewTest3VC.swift */; };
@@ -109,7 +109,7 @@
 		5ECB2E5023604CA400A935A6 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		5ECB2E542360578200A935A6 /* JSONMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMappable.swift; sourceTree = "<group>"; };
 		5ED72C142361319600726D09 /* CellButtonTriggerble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellButtonTriggerble.swift; sourceTree = "<group>"; };
-		5ED72C16236131ED00726D09 /* Reactive+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+UITableViewCell.swift"; sourceTree = "<group>"; };
+		5ED72C16236131ED00726D09 /* Reactive+Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Events.swift"; sourceTree = "<group>"; };
 		5ED72C1A23613D2B00726D09 /* TableViewTest1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest1VC.swift; sourceTree = "<group>"; };
 		5ED72C1C23613D8200726D09 /* TableViewTest2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest2VC.swift; sourceTree = "<group>"; };
 		5ED72C1E23613E8600726D09 /* TableViewTest3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest3VC.swift; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 			children = (
 				5ECB2E542360578200A935A6 /* JSONMappable.swift */,
 				66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */,
-				5ED72C16236131ED00726D09 /* Reactive+UITableViewCell.swift */,
+				5ED72C16236131ED00726D09 /* Reactive+Events.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -699,7 +699,7 @@
 				5ECB2E4B23604C1F00A935A6 /* MessageViewModel.swift in Sources */,
 				5ECB2E5123604CA400A935A6 /* MessageTableViewCell.swift in Sources */,
 				5ED72C2123613F6E00726D09 /* TableViewTest4VC.swift in Sources */,
-				5ED72C17236131ED00726D09 /* Reactive+UITableViewCell.swift in Sources */,
+				5ED72C17236131ED00726D09 /* Reactive+Events.swift in Sources */,
 				5ECB2E2723602CEA00A935A6 /* HomeTableViewCell.swift in Sources */,
 				5ECB2E2B23602F6100A935A6 /* ImportHeader.swift in Sources */,
 				5ECB2E2023602BCC00A935A6 /* PViewModelType.swift in Sources */,

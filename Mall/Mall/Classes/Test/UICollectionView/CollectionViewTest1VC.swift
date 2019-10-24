@@ -64,10 +64,17 @@ class CollectionViewTest1VC: UIViewController {
             
             
             // 手势点击
+            /*
             let tap = UITapGestureRecognizer()
             cell.label.addGestureRecognizer(tap)
             cell.label.isUserInteractionEnabled = true
             tap.rx.event.subscribe(onNext: { [weak self] recognizer in
+                guard let `self` = self else { return }
+                debugPrint(self)
+                debugPrint("手势点击")
+            }).disposed(by: cell.disposeBag)
+             */
+            cell.label.rx.tapAction.subscribe(onNext: { [weak self] recognizer in
                 guard let `self` = self else { return }
                 debugPrint(self)
                 debugPrint("手势点击")
