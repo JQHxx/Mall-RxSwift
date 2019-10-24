@@ -45,6 +45,7 @@
 		5ED72C1F23613E8600726D09 /* TableViewTest3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C1E23613E8600726D09 /* TableViewTest3VC.swift */; };
 		5ED72C2123613F6E00726D09 /* TableViewTest4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C2023613F6E00726D09 /* TableViewTest4VC.swift */; };
 		5ED72C232361429900726D09 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C222361429900726D09 /* TableView.swift */; };
+		5ED72C2523614B9000726D09 /* TableViewTest5VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C2423614B9000726D09 /* TableViewTest5VC.swift */; };
 		66FE13B72360A17D00A26D10 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */; };
 		909161E8F52EF8BDFC00E066 /* Pods_Mall_MallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417833ABFEF59ED9D54CE139 /* Pods_Mall_MallUITests.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		5ED72C1E23613E8600726D09 /* TableViewTest3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest3VC.swift; sourceTree = "<group>"; };
 		5ED72C2023613F6E00726D09 /* TableViewTest4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest4VC.swift; sourceTree = "<group>"; };
 		5ED72C222361429900726D09 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		5ED72C2423614B9000726D09 /* TableViewTest5VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest5VC.swift; sourceTree = "<group>"; };
 		66F6E1D38081772885546665 /* Pods-Mall-MallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall-MallUITests.release.xcconfig"; path = "Target Support Files/Pods-Mall-MallUITests/Pods-Mall-MallUITests.release.xcconfig"; sourceTree = "<group>"; };
 		66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		8F13CF82451CC28A041AC716 /* Pods_Mall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -399,11 +401,12 @@
 		5ED72C1923613CFD00726D09 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				5ED72C222361429900726D09 /* TableView.swift */,
 				5ED72C1A23613D2B00726D09 /* TableViewTest1VC.swift */,
 				5ED72C1C23613D8200726D09 /* TableViewTest2VC.swift */,
 				5ED72C1E23613E8600726D09 /* TableViewTest3VC.swift */,
 				5ED72C2023613F6E00726D09 /* TableViewTest4VC.swift */,
-				5ED72C222361429900726D09 /* TableView.swift */,
+				5ED72C2423614B9000726D09 /* TableViewTest5VC.swift */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 			files = (
 				5ECB2E302360311D00A935A6 /* API.swift in Sources */,
 				5ECB2E2323602BD800A935A6 /* SStatus.swift in Sources */,
+				5ED72C2523614B9000726D09 /* TableViewTest5VC.swift in Sources */,
 				5ED72C1B23613D2B00726D09 /* TableViewTest1VC.swift in Sources */,
 				5ED72C1D23613D8200726D09 /* TableViewTest2VC.swift in Sources */,
 				66FE13B72360A17D00A26D10 /* Observable+ObjectMapper.swift in Sources */,
