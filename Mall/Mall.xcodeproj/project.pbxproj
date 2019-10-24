@@ -38,6 +38,13 @@
 		5ECB2E4F23604C8800A935A6 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E4E23604C8800A935A6 /* MessageModel.swift */; };
 		5ECB2E5123604CA400A935A6 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E5023604CA400A935A6 /* MessageTableViewCell.swift */; };
 		5ECB2E552360578200A935A6 /* JSONMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E542360578200A935A6 /* JSONMappable.swift */; };
+		5ED72C152361319600726D09 /* CellButtonTriggerble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C142361319600726D09 /* CellButtonTriggerble.swift */; };
+		5ED72C17236131ED00726D09 /* Reactive+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C16236131ED00726D09 /* Reactive+UITableViewCell.swift */; };
+		5ED72C1B23613D2B00726D09 /* TableViewTest1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C1A23613D2B00726D09 /* TableViewTest1VC.swift */; };
+		5ED72C1D23613D8200726D09 /* TableViewTest2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C1C23613D8200726D09 /* TableViewTest2VC.swift */; };
+		5ED72C1F23613E8600726D09 /* TableViewTest3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C1E23613E8600726D09 /* TableViewTest3VC.swift */; };
+		5ED72C2123613F6E00726D09 /* TableViewTest4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C2023613F6E00726D09 /* TableViewTest4VC.swift */; };
+		5ED72C232361429900726D09 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C222361429900726D09 /* TableView.swift */; };
 		66FE13B72360A17D00A26D10 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */; };
 		909161E8F52EF8BDFC00E066 /* Pods_Mall_MallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417833ABFEF59ED9D54CE139 /* Pods_Mall_MallUITests.framework */; };
 /* End PBXBuildFile section */
@@ -98,6 +105,13 @@
 		5ECB2E4E23604C8800A935A6 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		5ECB2E5023604CA400A935A6 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		5ECB2E542360578200A935A6 /* JSONMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMappable.swift; sourceTree = "<group>"; };
+		5ED72C142361319600726D09 /* CellButtonTriggerble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellButtonTriggerble.swift; sourceTree = "<group>"; };
+		5ED72C16236131ED00726D09 /* Reactive+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+UITableViewCell.swift"; sourceTree = "<group>"; };
+		5ED72C1A23613D2B00726D09 /* TableViewTest1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest1VC.swift; sourceTree = "<group>"; };
+		5ED72C1C23613D8200726D09 /* TableViewTest2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest2VC.swift; sourceTree = "<group>"; };
+		5ED72C1E23613E8600726D09 /* TableViewTest3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest3VC.swift; sourceTree = "<group>"; };
+		5ED72C2023613F6E00726D09 /* TableViewTest4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTest4VC.swift; sourceTree = "<group>"; };
+		5ED72C222361429900726D09 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		66F6E1D38081772885546665 /* Pods-Mall-MallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall-MallUITests.release.xcconfig"; path = "Target Support Files/Pods-Mall-MallUITests/Pods-Mall-MallUITests.release.xcconfig"; sourceTree = "<group>"; };
 		66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		8F13CF82451CC28A041AC716 /* Pods_Mall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,8 +207,9 @@
 		5ECB2DFD2360262700A935A6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5ECB2E1323602BB600A935A6 /* Section */,
-				5ECB2E1A23602BB600A935A6 /* ThreePart */,
+				5ED72C1823613CE500726D09 /* Test */,
+				5ECB2E1323602BB600A935A6 /* Sections */,
+				5ECB2E1A23602BB600A935A6 /* ThreeLib */,
 				5ECB2DFE2360263200A935A6 /* MVVM */,
 			);
 			path = Classes;
@@ -213,21 +228,22 @@
 			isa = PBXGroup;
 			children = (
 				5ECB2E1F23602BCC00A935A6 /* PViewModelType.swift */,
+				5ED72C142361319600726D09 /* CellButtonTriggerble.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		5ECB2E1323602BB600A935A6 /* Section */ = {
+		5ECB2E1323602BB600A935A6 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				5ECB2E4323604BB900A935A6 /* Message */,
-				5ECB2E37236031EA00A935A6 /* Mine */,
-				5ECB2E1423602BB600A935A6 /* Home */,
+				5ECB2E4323604BB900A935A6 /* Message_Module */,
+				5ECB2E37236031EA00A935A6 /* Mine_Module */,
+				5ECB2E1423602BB600A935A6 /* Home_Module */,
 			);
-			path = Section;
+			path = Sections;
 			sourceTree = "<group>";
 		};
-		5ECB2E1423602BB600A935A6 /* Home */ = {
+		5ECB2E1423602BB600A935A6 /* Home_Module */ = {
 			isa = PBXGroup;
 			children = (
 				5ECB2E402360412D00A935A6 /* Util */,
@@ -236,7 +252,7 @@
 				5ECB2E1723602BB600A935A6 /* Model */,
 				5ECB2E1823602BB600A935A6 /* View */,
 			);
-			path = Home;
+			path = Home_Module;
 			sourceTree = "<group>";
 		};
 		5ECB2E1523602BB600A935A6 /* ViewModel */ = {
@@ -263,14 +279,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		5ECB2E1A23602BB600A935A6 /* ThreePart */ = {
+		5ECB2E1A23602BB600A935A6 /* ThreeLib */ = {
 			isa = PBXGroup;
 			children = (
 				5ECB2E2C2360304C00A935A6 /* HUD */,
 				5ECB2E1C23602BB600A935A6 /* Extension */,
 				5ECB2E1D23602BB600A935A6 /* Network */,
 			);
-			path = ThreePart;
+			path = ThreeLib;
 			sourceTree = "<group>";
 		};
 		5ECB2E1C23602BB600A935A6 /* Extension */ = {
@@ -278,6 +294,7 @@
 			children = (
 				5ECB2E542360578200A935A6 /* JSONMappable.swift */,
 				66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */,
+				5ED72C16236131ED00726D09 /* Reactive+UITableViewCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -311,12 +328,12 @@
 			path = HUD;
 			sourceTree = "<group>";
 		};
-		5ECB2E37236031EA00A935A6 /* Mine */ = {
+		5ECB2E37236031EA00A935A6 /* Mine_Module */ = {
 			isa = PBXGroup;
 			children = (
 				5ECB2E38236031FC00A935A6 /* MineViewController.swift */,
 			);
-			path = Mine;
+			path = Mine_Module;
 			sourceTree = "<group>";
 		};
 		5ECB2E402360412D00A935A6 /* Util */ = {
@@ -327,7 +344,7 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		5ECB2E4323604BB900A935A6 /* Message */ = {
+		5ECB2E4323604BB900A935A6 /* Message_Module */ = {
 			isa = PBXGroup;
 			children = (
 				5ECB2E4923604C0400A935A6 /* ViewModel */,
@@ -336,7 +353,7 @@
 				5ECB2E4623604BDA00A935A6 /* View */,
 				5ECB2E4423604BCB00A935A6 /* MessageViewController.swift */,
 			);
-			path = Message;
+			path = Message_Module;
 			sourceTree = "<group>";
 		};
 		5ECB2E4623604BDA00A935A6 /* View */ = {
@@ -369,6 +386,26 @@
 				5ECB2E4A23604C1F00A935A6 /* MessageViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5ED72C1823613CE500726D09 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				5ED72C1923613CFD00726D09 /* UITableView */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		5ED72C1923613CFD00726D09 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				5ED72C1A23613D2B00726D09 /* TableViewTest1VC.swift */,
+				5ED72C1C23613D8200726D09 /* TableViewTest2VC.swift */,
+				5ED72C1E23613E8600726D09 /* TableViewTest3VC.swift */,
+				5ED72C2023613F6E00726D09 /* TableViewTest4VC.swift */,
+				5ED72C222361429900726D09 /* TableView.swift */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 		DF83E7EAA0E6D415759AAEEC /* Pods */ = {
@@ -635,13 +672,18 @@
 			files = (
 				5ECB2E302360311D00A935A6 /* API.swift in Sources */,
 				5ECB2E2323602BD800A935A6 /* SStatus.swift in Sources */,
+				5ED72C1B23613D2B00726D09 /* TableViewTest1VC.swift in Sources */,
+				5ED72C1D23613D8200726D09 /* TableViewTest2VC.swift in Sources */,
 				66FE13B72360A17D00A26D10 /* Observable+ObjectMapper.swift in Sources */,
 				5ECB2E3D2360357D00A935A6 /* BFRequest.swift in Sources */,
 				5ECB2DD2236025D600A935A6 /* ViewController.swift in Sources */,
 				5ECB2E552360578200A935A6 /* JSONMappable.swift in Sources */,
 				5ECB2E4B23604C1F00A935A6 /* MessageViewModel.swift in Sources */,
 				5ECB2E5123604CA400A935A6 /* MessageTableViewCell.swift in Sources */,
+				5ED72C2123613F6E00726D09 /* TableViewTest4VC.swift in Sources */,
+				5ED72C17236131ED00726D09 /* Reactive+UITableViewCell.swift in Sources */,
 				5ECB2E2723602CEA00A935A6 /* HomeTableViewCell.swift in Sources */,
+				5ED72C232361429900726D09 /* TableView.swift in Sources */,
 				5ECB2E2B23602F6100A935A6 /* ImportHeader.swift in Sources */,
 				5ECB2E2023602BCC00A935A6 /* PViewModelType.swift in Sources */,
 				5ECB2E2E2360307200A935A6 /* TProgressHUD.swift in Sources */,
@@ -650,6 +692,7 @@
 				5ECB2E2923602D0300A935A6 /* HomeModel.swift in Sources */,
 				5ECB2E1E23602BB600A935A6 /* HomeViewModel.swift in Sources */,
 				5ECB2E322360316E00A935A6 /* HomeApiManager.swift in Sources */,
+				5ED72C1F23613E8600726D09 /* TableViewTest3VC.swift in Sources */,
 				5ECB2DCE236025D600A935A6 /* AppDelegate.swift in Sources */,
 				5ECB2E4523604BCB00A935A6 /* MessageViewController.swift in Sources */,
 				5ECB2E3C2360357D00A935A6 /* CommonAPI.swift in Sources */,
@@ -657,6 +700,7 @@
 				5ECB2E2523602CBD00A935A6 /* HomeViewController.swift in Sources */,
 				5ECB2E3F2360360D00A935A6 /* MoyaNetwork.swift in Sources */,
 				5ECB2E422360413A00A935A6 /* HomeRequest.swift in Sources */,
+				5ED72C152361319600726D09 /* CellButtonTriggerble.swift in Sources */,
 				5ECB2E39236031FC00A935A6 /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
