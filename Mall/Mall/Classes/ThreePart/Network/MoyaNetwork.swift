@@ -23,6 +23,8 @@ private let ParseJSONErrorMes = "解析出错"
 
 enum RxSwiftMoyaError {
     case ParseJSONError
+    case CustomeError(code: Int, description: String)
+    case HTTPError
     case OtherError(description: String)
 }
 
