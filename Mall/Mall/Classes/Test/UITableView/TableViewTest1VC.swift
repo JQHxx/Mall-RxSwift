@@ -33,9 +33,6 @@ class TableViewTest1VC: UIViewController {
         tableView.rx.setDelegate(self)
         .disposed(by: disposeBag)
         
-
-        
-        
         // 模型点击事件
         tableView.rx.modelSelected(String.self).subscribe(onNext: { [weak self](str) in
             guard let `self` = self else { return }

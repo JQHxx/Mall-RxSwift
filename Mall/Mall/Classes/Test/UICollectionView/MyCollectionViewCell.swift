@@ -10,7 +10,9 @@ import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {
      
-    var label:UILabel!
+    var label: UILabel!
+    var button = UIButton()
+    let disposeBag = DisposeBag()
      
     override init(frame: CGRect) {
         super.init(frame: frame)

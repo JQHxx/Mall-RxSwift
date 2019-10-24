@@ -26,8 +26,8 @@ class TableViewTest4VC: UIViewController {
         // 创建数据源
         let dataSource = RxTableViewSectionedReloadDataSource<MyMSection>(configureCell: {(dataSource, tableView, indexPath, element) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-                      cell.textLabel?.text = "\(indexPath.row)：\(element)"
-                      return cell
+            cell.textLabel?.text = "\(indexPath.row)：\(element)"
+            return cell
         })
         
         //设置分区头标题

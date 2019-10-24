@@ -8,14 +8,12 @@
 
 import UIKit
 import RxDataSources
+import RxSwift
+import RxCocoa
 
 class CollectionViewTest1VC: UIViewController {
     
-    private let dataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, String>>.init(configureCell: { (datasource, collectionView, indexPath, item) in
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MyCollectionViewCell
-            cell.label.text = "\(item)"
-            return cell
-    })
+    private var dataSource: RxCollectionViewSectionedReloadDataSource<SectionModel<String, String>>!
     
     /*
     private let dataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, String>>.init(configureCell: { (datasource, collectionView, indexPath, item) in
@@ -41,6 +39,42 @@ class CollectionViewTest1VC: UIViewController {
         collectionView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+        
+        dataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, String>>.init(configureCell: { (datasource, collectionView, indexPath, item) in
+               let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MyCollectionViewCell
+            cell.label.text = "\(item)"
+
+            // button 的点击事件
+            cell.button.rx.tap.asDriver().drive(onNext: {
+
+            }).disposed(by: cell.disposeBag)
+
+
+            cell.button.rx.tap.subscribe(onNext: { recognizer in
+
+            }).disposed(by: cell.disposeBag)
+            
+            // 防止多次点击
+            cell.button.rx.tap.asObservable().debounce(1, scheduler: MainScheduler.instance).subscribe(onNext: {
+            }).disposed(by: cell.disposeBag)
+
+            cell.button.rx.controlEvent(UIControlEvents.touchUpInside).subscribe(onNext: { recognizer in
+
+            }).disposed(by: cell.disposeBag)
+            
+            
+            // 手势点击
+            let tap = UITapGestureRecognizer()
+            cell.label.addGestureRecognizer(tap)
+            cell.label.isUserInteractionEnabled = true
+            tap.rx.event.subscribe(onNext: { [weak self] recognizer in
+                guard let `self` = self else { return }
+                debugPrint(self)
+                debugPrint("手势点击")
+            }).disposed(by: cell.disposeBag)
+            
+            return cell
+        })
         
         // collectionView.rx.setDelegate(self).disposed(by: disposeBag)
         
