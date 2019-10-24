@@ -48,6 +48,7 @@
 		5ED72C282361525800726D09 /* CollectionViewTest1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C272361525800726D09 /* CollectionViewTest1VC.swift */; };
 		5ED72C2A2361548F00726D09 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C292361548F00726D09 /* MyCollectionViewCell.swift */; };
 		5ED72C2C2361567200726D09 /* MySectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C2B2361567200726D09 /* MySectionHeader.swift */; };
+		5ED72C382361A8AB00726D09 /* UIColorDarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED72C372361A8AB00726D09 /* UIColorDarkMode.swift */; };
 		66FE13B72360A17D00A26D10 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */; };
 		909161E8F52EF8BDFC00E066 /* Pods_Mall_MallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417833ABFEF59ED9D54CE139 /* Pods_Mall_MallUITests.framework */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,7 @@
 		5ED72C272361525800726D09 /* CollectionViewTest1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTest1VC.swift; sourceTree = "<group>"; };
 		5ED72C292361548F00726D09 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5ED72C2B2361567200726D09 /* MySectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySectionHeader.swift; sourceTree = "<group>"; };
+		5ED72C372361A8AB00726D09 /* UIColorDarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorDarkMode.swift; sourceTree = "<group>"; };
 		66F6E1D38081772885546665 /* Pods-Mall-MallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall-MallUITests.release.xcconfig"; path = "Target Support Files/Pods-Mall-MallUITests/Pods-Mall-MallUITests.release.xcconfig"; sourceTree = "<group>"; };
 		66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		8F13CF82451CC28A041AC716 /* Pods_Mall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +215,7 @@
 		5ECB2DFD2360262700A935A6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5ED72C352361A87000726D09 /* Common */,
 				5ED72C1823613CE500726D09 /* Test */,
 				5ECB2E1323602BB600A935A6 /* Sections */,
 				5ECB2E1A23602BB600A935A6 /* ThreeLib */,
@@ -423,6 +426,22 @@
 				5ED72C2B2361567200726D09 /* MySectionHeader.swift */,
 			);
 			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		5ED72C352361A87000726D09 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5ED72C362361A88000726D09 /* DarkMode */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5ED72C362361A88000726D09 /* DarkMode */ = {
+			isa = PBXGroup;
+			children = (
+				5ED72C372361A8AB00726D09 /* UIColorDarkMode.swift */,
+			);
+			path = DarkMode;
 			sourceTree = "<group>";
 		};
 		DF83E7EAA0E6D415759AAEEC /* Pods */ = {
@@ -711,6 +730,7 @@
 				5ECB2E322360316E00A935A6 /* HomeApiManager.swift in Sources */,
 				5ED72C2C2361567200726D09 /* MySectionHeader.swift in Sources */,
 				5ED72C282361525800726D09 /* CollectionViewTest1VC.swift in Sources */,
+				5ED72C382361A8AB00726D09 /* UIColorDarkMode.swift in Sources */,
 				5ED72C1F23613E8600726D09 /* TableViewTest3VC.swift in Sources */,
 				5ECB2DCE236025D600A935A6 /* AppDelegate.swift in Sources */,
 				5ECB2E4523604BCB00A935A6 /* MessageViewController.swift in Sources */,
