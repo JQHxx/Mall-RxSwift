@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4035427BCDF3FA7CAA6C24F8 /* Pods_Mall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F13CF82451CC28A041AC716 /* Pods_Mall.framework */; };
 		55CB3E9273A7A3086045AB92 /* Pods_MallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116CB61FB26671EC00F6B28 /* Pods_MallTests.framework */; };
+		5EB169152362ED6400251ED5 /* RResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB169142362ED6400251ED5 /* RResult.swift */; };
 		5EBB24B52362978D00C3CE26 /* Runtime+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB24B12362978D00C3CE26 /* Runtime+Extension.swift */; };
 		5EBB24B62362978D00C3CE26 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB24B22362978D00C3CE26 /* UIColor+Extension.swift */; };
 		5EBB24B72362978D00C3CE26 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB24B32362978D00C3CE26 /* CALayer+Extension.swift */; };
@@ -79,6 +80,7 @@
 		2CFC99D00D9A3746A90B110A /* Pods-MallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.release.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.release.xcconfig"; sourceTree = "<group>"; };
 		35D7DFA06FFC900529E8EDA3 /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		417833ABFEF59ED9D54CE139 /* Pods_Mall_MallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mall_MallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EB169142362ED6400251ED5 /* RResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RResult.swift; sourceTree = "<group>"; };
 		5EBB24B12362978D00C3CE26 /* Runtime+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Runtime+Extension.swift"; sourceTree = "<group>"; };
 		5EBB24B22362978D00C3CE26 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5EBB24B32362978D00C3CE26 /* CALayer+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
@@ -167,6 +169,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EB169132362ED4100251ED5 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				5EB169142362ED6400251ED5 /* RResult.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
 		5EBB24B02362974800C3CE26 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +462,7 @@
 		5ED72C352361A87000726D09 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5EB169132362ED4100251ED5 /* Result */,
 				5EBB24B02362974800C3CE26 /* Extension */,
 				5ED72C362361A88000726D09 /* DarkMode */,
 			);
@@ -750,6 +761,7 @@
 				5ECB2E2E2360307200A935A6 /* TProgressHUD.swift in Sources */,
 				5ECB2E4D23604C4000A935A6 /* MessageRequest.swift in Sources */,
 				5ECB2E342360318800A935A6 /* MineApiManager.swift in Sources */,
+				5EB169152362ED6400251ED5 /* RResult.swift in Sources */,
 				5EBB24B52362978D00C3CE26 /* Runtime+Extension.swift in Sources */,
 				5ECB2E2923602D0300A935A6 /* HomeModel.swift in Sources */,
 				5ECB2E1E23602BB600A935A6 /* HomeViewModel.swift in Sources */,
