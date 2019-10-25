@@ -16,10 +16,14 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let homeVC = HomeViewController()
-        self.present(homeVC, animated: true, completion: nil)
-    }
 
+        guard let VC = CTMediator.sharedInstance()?.Home_Module_homeViewController(callback: { (result) in
+
+        }) else { return }
+
+        // let homeVC = CollectionViewTest1VC()
+        self.present(VC, animated: true, completion: nil)
+    }
 
 }
 

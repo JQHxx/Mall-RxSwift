@@ -31,9 +31,11 @@ class HomeViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { (model) in
                 
-            }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: rx.disposeBag)
+            }).disposed(by: rx.disposeBag)
         
         vmOutput?.refreshStatus.asObservable().subscribe(onNext: {[weak self] status in
+            guard let `self` = self else { return }
+            debugPrint(self)
             switch status {
             case .beingHeaderRefresh: break
             case .endHeaderRefresh: break

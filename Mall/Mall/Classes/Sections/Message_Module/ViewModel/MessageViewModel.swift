@@ -45,15 +45,17 @@ extension MessageViewModel: PViewModelType {
         input.request.asObservable().subscribe {
             let request = $0.element
             
-            output.requestCommand.subscribe( onNext: { [unowned self] isReloadData in
+            output.requestCommand.subscribe( onNext: { [weak self] isReloadData in
+                guard let `self` = self else { return }
                 // self.pageIndex = isReloadData ? 0 : self.pageIndex + 1
                 MoyaNetwork.shared.requestDataWithTargetString(target: CommonAPI.commonRequest(r: request!))
                     .asObservable()
                     .subscribe {[weak self] event in
+                        guard let `self` = self else { return }
                         switch event {
                         case let .next(result):
                             let model = MessageModel.init(JSON.init(result))
-                            self?.messageModels.accept(isReloadData ? model.datas : (self?.messageModels.value ?? []) + model.datas)
+                            self.messageModels.accept(isReloadData ? model.datas : (self.messageModels.value) + model.datas)
                             TProgressHUD.showSuccess("加载成功")
                         case let .error(error):
                             TProgressHUD.showError(error.localizedDescription)
