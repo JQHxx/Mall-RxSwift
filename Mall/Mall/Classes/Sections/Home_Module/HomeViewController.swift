@@ -13,7 +13,6 @@ class HomeViewController: UIViewController {
     var vmOutput: HomeViewModel.Output? = nil
     let homeViewModel = HomeViewModel()
     var requestRelay = BehaviorRelay<HomeRequest>.init(value: HomeRequest())
-    var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +31,7 @@ class HomeViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { (model) in
                 
-            }).disposed(by: disposeBag)
+            }).disposed(by: rx.disposeBag)
         
         vmOutput?.refreshStatus.asObservable().subscribe(onNext: {[weak self] status in
             guard let `self` = self else { return }
