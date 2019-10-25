@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4035427BCDF3FA7CAA6C24F8 /* Pods_Mall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F13CF82451CC28A041AC716 /* Pods_Mall.framework */; };
 		55CB3E9273A7A3086045AB92 /* Pods_MallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116CB61FB26671EC00F6B28 /* Pods_MallTests.framework */; };
+		5EBB24B52362978D00C3CE26 /* Runtime+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB24B12362978D00C3CE26 /* Runtime+Extension.swift */; };
+		5EBB24B62362978D00C3CE26 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB24B22362978D00C3CE26 /* UIColor+Extension.swift */; };
+		5EBB24B72362978D00C3CE26 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB24B32362978D00C3CE26 /* CALayer+Extension.swift */; };
+		5EBB24B82362978D00C3CE26 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB24B42362978D00C3CE26 /* UIImage+Extension.swift */; };
 		5ECB2DCE236025D600A935A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2DCD236025D600A935A6 /* AppDelegate.swift */; };
 		5ECB2DD2236025D600A935A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2DD1236025D600A935A6 /* ViewController.swift */; };
 		5ECB2DD5236025D600A935A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECB2DD3236025D600A935A6 /* Main.storyboard */; };
@@ -75,6 +79,10 @@
 		2CFC99D00D9A3746A90B110A /* Pods-MallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.release.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.release.xcconfig"; sourceTree = "<group>"; };
 		35D7DFA06FFC900529E8EDA3 /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		417833ABFEF59ED9D54CE139 /* Pods_Mall_MallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mall_MallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EBB24B12362978D00C3CE26 /* Runtime+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Runtime+Extension.swift"; sourceTree = "<group>"; };
+		5EBB24B22362978D00C3CE26 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		5EBB24B32362978D00C3CE26 /* CALayer+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		5EBB24B42362978D00C3CE26 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		5ECB2DCA236025D600A935A6 /* Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECB2DCD236025D600A935A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECB2DD1236025D600A935A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +167,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EBB24B02362974800C3CE26 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5EBB24B32362978D00C3CE26 /* CALayer+Extension.swift */,
+				5EBB24B12362978D00C3CE26 /* Runtime+Extension.swift */,
+				5EBB24B22362978D00C3CE26 /* UIColor+Extension.swift */,
+				5EBB24B42362978D00C3CE26 /* UIImage+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		5ECB2DC1236025D600A935A6 = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +452,7 @@
 		5ED72C352361A87000726D09 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5EBB24B02362974800C3CE26 /* Extension */,
 				5ED72C362361A88000726D09 /* DarkMode */,
 			);
 			path = Common;
@@ -712,6 +732,7 @@
 				5ECB2E302360311D00A935A6 /* API.swift in Sources */,
 				5ECB2E2323602BD800A935A6 /* SStatus.swift in Sources */,
 				5ED72C2523614B9000726D09 /* TableViewTest5VC.swift in Sources */,
+				5EBB24B72362978D00C3CE26 /* CALayer+Extension.swift in Sources */,
 				5ED72C1B23613D2B00726D09 /* TableViewTest1VC.swift in Sources */,
 				5ED72C1D23613D8200726D09 /* TableViewTest2VC.swift in Sources */,
 				66FE13B72360A17D00A26D10 /* Observable+ObjectMapper.swift in Sources */,
@@ -729,6 +750,7 @@
 				5ECB2E2E2360307200A935A6 /* TProgressHUD.swift in Sources */,
 				5ECB2E4D23604C4000A935A6 /* MessageRequest.swift in Sources */,
 				5ECB2E342360318800A935A6 /* MineApiManager.swift in Sources */,
+				5EBB24B52362978D00C3CE26 /* Runtime+Extension.swift in Sources */,
 				5ECB2E2923602D0300A935A6 /* HomeModel.swift in Sources */,
 				5ECB2E1E23602BB600A935A6 /* HomeViewModel.swift in Sources */,
 				5ECB2E322360316E00A935A6 /* HomeApiManager.swift in Sources */,
@@ -736,6 +758,7 @@
 				5ED72C282361525800726D09 /* CollectionViewTest1VC.swift in Sources */,
 				5ED72C382361A8AB00726D09 /* UIColorDarkMode.swift in Sources */,
 				5ED72C1F23613E8600726D09 /* TableViewTest3VC.swift in Sources */,
+				5EBB24B82362978D00C3CE26 /* UIImage+Extension.swift in Sources */,
 				5ECB2DCE236025D600A935A6 /* AppDelegate.swift in Sources */,
 				5ECB2E4523604BCB00A935A6 /* MessageViewController.swift in Sources */,
 				5ECB2E3C2360357D00A935A6 /* CommonAPI.swift in Sources */,
@@ -744,6 +767,7 @@
 				5ECB2E3F2360360D00A935A6 /* MoyaNetwork.swift in Sources */,
 				5ED72C2A2361548F00726D09 /* MyCollectionViewCell.swift in Sources */,
 				5ECB2E422360413A00A935A6 /* HomeRequest.swift in Sources */,
+				5EBB24B62362978D00C3CE26 /* UIColor+Extension.swift in Sources */,
 				5ED72C152361319600726D09 /* CellButtonTriggerble.swift in Sources */,
 				5ECB2E39236031FC00A935A6 /* MineViewController.swift in Sources */,
 			);
