@@ -21,4 +21,16 @@ extension CTMediator {
         }
         return nil
     }
+
+    /** 调用OC的类
+    @objc public func A_showObjc(callback:@escaping (String) -> Void) -> UIViewController? {
+        let callbackBlock = callback as @convention(block) (String) -> Void
+        let callbackBlockObject = unsafeBitCast(callbackBlock, to: AnyObject.self)
+        let params = ["callback":callbackBlockObject] as [AnyHashable:Any]
+        if let viewController = self.performTarget("A", action: "Extension_ViewController", params: params, shouldCacheTarget: false) as? UIViewController {
+            return viewController
+        }
+        return nil
+    }
+     */
 }
