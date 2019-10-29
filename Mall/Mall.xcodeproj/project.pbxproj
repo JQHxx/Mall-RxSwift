@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4035427BCDF3FA7CAA6C24F8 /* Pods_Mall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F13CF82451CC28A041AC716 /* Pods_Mall.framework */; };
 		55CB3E9273A7A3086045AB92 /* Pods_MallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116CB61FB26671EC00F6B28 /* Pods_MallTests.framework */; };
+		5EA9CD8C2368108A0064DF4D /* UISegmentedControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9CD8B2368108A0064DF4D /* UISegmentedControl+.swift */; };
+		5EA9CD8E2368113E0064DF4D /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9CD8D2368113E0064DF4D /* Array+.swift */; };
 		5EB169152362ED6400251ED5 /* RResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB169142362ED6400251ED5 /* RResult.swift */; };
 		5EBB24B52362978D00C3CE26 /* Runtime+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB24B12362978D00C3CE26 /* Runtime+Extension.swift */; };
 		5EBB24B62362978D00C3CE26 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB24B22362978D00C3CE26 /* UIColor+Extension.swift */; };
@@ -84,6 +86,8 @@
 		2CFC99D00D9A3746A90B110A /* Pods-MallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.release.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.release.xcconfig"; sourceTree = "<group>"; };
 		35D7DFA06FFC900529E8EDA3 /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		417833ABFEF59ED9D54CE139 /* Pods_Mall_MallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mall_MallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA9CD8B2368108A0064DF4D /* UISegmentedControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+.swift"; sourceTree = "<group>"; };
+		5EA9CD8D2368113E0064DF4D /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		5EB169142362ED6400251ED5 /* RResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RResult.swift; sourceTree = "<group>"; };
 		5EBB24B12362978D00C3CE26 /* Runtime+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Runtime+Extension.swift"; sourceTree = "<group>"; };
 		5EBB24B22362978D00C3CE26 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -345,6 +349,8 @@
 				5ECB2E542360578200A935A6 /* JSONMappable.swift */,
 				66FE13B62360A17D00A26D10 /* Observable+ObjectMapper.swift */,
 				5ED72C16236131ED00726D09 /* Reactive+Events.swift */,
+				5EA9CD8B2368108A0064DF4D /* UISegmentedControl+.swift */,
+				5EA9CD8D2368113E0064DF4D /* Array+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -797,6 +803,7 @@
 				5ECB2E4B23604C1F00A935A6 /* MessageViewModel.swift in Sources */,
 				5ECB2E5123604CA400A935A6 /* MessageTableViewCell.swift in Sources */,
 				5ED72C2123613F6E00726D09 /* TableViewTest4VC.swift in Sources */,
+				5EA9CD8E2368113E0064DF4D /* Array+.swift in Sources */,
 				5ED72C17236131ED00726D09 /* Reactive+Events.swift in Sources */,
 				5ECB2E2723602CEA00A935A6 /* HomeTableViewCell.swift in Sources */,
 				5ECB2E2B23602F6100A935A6 /* ImportHeader.swift in Sources */,
@@ -809,6 +816,7 @@
 				5EBB24B52362978D00C3CE26 /* Runtime+Extension.swift in Sources */,
 				5ECB2E2923602D0300A935A6 /* HomeModel.swift in Sources */,
 				5ECB2E1E23602BB600A935A6 /* HomeViewModel.swift in Sources */,
+				5EA9CD8C2368108A0064DF4D /* UISegmentedControl+.swift in Sources */,
 				5ECB2E322360316E00A935A6 /* HomeApiManager.swift in Sources */,
 				5ED72C2C2361567200726D09 /* MySectionHeader.swift in Sources */,
 				5ED72C282361525800726D09 /* CollectionViewTest1VC.swift in Sources */,
@@ -1005,7 +1013,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76RA22T2W7;
+				DEVELOPMENT_TEAM = SYZGGW5E8S;
 				INFOPLIST_FILE = Mall/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
