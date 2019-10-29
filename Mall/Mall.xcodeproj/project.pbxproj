@@ -11,6 +11,7 @@
 		55CB3E9273A7A3086045AB92 /* Pods_MallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116CB61FB26671EC00F6B28 /* Pods_MallTests.framework */; };
 		5EA9CD8C2368108A0064DF4D /* UISegmentedControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9CD8B2368108A0064DF4D /* UISegmentedControl+.swift */; };
 		5EA9CD8E2368113E0064DF4D /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9CD8D2368113E0064DF4D /* Array+.swift */; };
+		5EA9CD90236817A70064DF4D /* BFDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9CD8F236817A70064DF4D /* BFDateFormatter.swift */; };
 		5EB169152362ED6400251ED5 /* RResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB169142362ED6400251ED5 /* RResult.swift */; };
 		5EBB24B52362978D00C3CE26 /* Runtime+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB24B12362978D00C3CE26 /* Runtime+Extension.swift */; };
 		5EBB24B62362978D00C3CE26 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB24B22362978D00C3CE26 /* UIColor+Extension.swift */; };
@@ -88,6 +89,7 @@
 		417833ABFEF59ED9D54CE139 /* Pods_Mall_MallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mall_MallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA9CD8B2368108A0064DF4D /* UISegmentedControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+.swift"; sourceTree = "<group>"; };
 		5EA9CD8D2368113E0064DF4D /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		5EA9CD8F236817A70064DF4D /* BFDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFDateFormatter.swift; sourceTree = "<group>"; };
 		5EB169142362ED6400251ED5 /* RResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RResult.swift; sourceTree = "<group>"; };
 		5EBB24B12362978D00C3CE26 /* Runtime+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Runtime+Extension.swift"; sourceTree = "<group>"; };
 		5EBB24B22362978D00C3CE26 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -524,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				66CD3C3D23635F1F00CD875E /* BobValidationService.swift */,
+				5EA9CD8F236817A70064DF4D /* BFDateFormatter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -806,6 +809,7 @@
 				5EA9CD8E2368113E0064DF4D /* Array+.swift in Sources */,
 				5ED72C17236131ED00726D09 /* Reactive+Events.swift in Sources */,
 				5ECB2E2723602CEA00A935A6 /* HomeTableViewCell.swift in Sources */,
+				5EA9CD90236817A70064DF4D /* BFDateFormatter.swift in Sources */,
 				5ECB2E2B23602F6100A935A6 /* ImportHeader.swift in Sources */,
 				5ED72C3A2361A9F600726D09 /* DarkModeUtil.swift in Sources */,
 				5ECB2E2023602BCC00A935A6 /* PViewModelType.swift in Sources */,

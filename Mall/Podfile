@@ -19,6 +19,7 @@ target 'Mall' do
   pod 'MJRefresh'
   pod 'SVProgressHUD'
   pod "CTMediator"
+  # pod 'YYImage', '~> 1.0.4'
 
 
   target 'MallTests' do
