@@ -148,6 +148,7 @@
 		5ED72C2B2361567200726D09 /* MySectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySectionHeader.swift; sourceTree = "<group>"; };
 		5ED72C372361A8AB00726D09 /* UIColorDarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorDarkMode.swift; sourceTree = "<group>"; };
 		5ED72C392361A9F600726D09 /* DarkModeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeUtil.swift; sourceTree = "<group>"; };
+		5EF1E11F2369700F0027EC8D /* Mall-bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mall-bridging.h"; sourceTree = "<group>"; };
 		66CD3C3623635AE600CD875E /* HomeModule_CTMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule_CTMediator.swift; sourceTree = "<group>"; };
 		66CD3C3823635B1300CD875E /* Target_HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target_HomeModule.swift; sourceTree = "<group>"; };
 		66CD3C3A23635EDE00CD875E /* UIColor+BobExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+BobExtension.swift"; sourceTree = "<group>"; };
@@ -242,6 +243,7 @@
 				5ECB2DD8236025DB00A935A6 /* LaunchScreen.storyboard */,
 				5ECB2DDB236025DB00A935A6 /* Info.plist */,
 				5ECB2E2A23602F6100A935A6 /* ImportHeader.swift */,
+				5EF1E11F2369700F0027EC8D /* Mall-bridging.h */,
 			);
 			path = Mall;
 			sourceTree = "<group>";
@@ -1039,6 +1041,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.Mall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mall/Mall-bridging.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1060,6 +1063,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.Mall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mall/Mall-bridging.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
