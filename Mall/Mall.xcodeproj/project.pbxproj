@@ -34,7 +34,7 @@
 		5ECB2E2723602CEA00A935A6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E2623602CEA00A935A6 /* HomeTableViewCell.swift */; };
 		5ECB2E2923602D0300A935A6 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E2823602D0300A935A6 /* HomeModel.swift */; };
 		5ECB2E2B23602F6100A935A6 /* ImportHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E2A23602F6100A935A6 /* ImportHeader.swift */; };
-		5ECB2E2E2360307200A935A6 /* TProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E2D2360307200A935A6 /* TProgressHUD.swift */; };
+		5ECB2E2E2360307200A935A6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E2D2360307200A935A6 /* Toast.swift */; };
 		5ECB2E302360311D00A935A6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E2F2360311D00A935A6 /* API.swift */; };
 		5ECB2E322360316E00A935A6 /* HomeApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E312360316E00A935A6 /* HomeApiManager.swift */; };
 		5ECB2E342360318800A935A6 /* MineApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB2E332360318800A935A6 /* MineApiManager.swift */; };
@@ -121,7 +121,7 @@
 		5ECB2E2623602CEA00A935A6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		5ECB2E2823602D0300A935A6 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		5ECB2E2A23602F6100A935A6 /* ImportHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportHeader.swift; sourceTree = "<group>"; };
-		5ECB2E2D2360307200A935A6 /* TProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TProgressHUD.swift; sourceTree = "<group>"; };
+		5ECB2E2D2360307200A935A6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		5ECB2E2F2360311D00A935A6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5ECB2E312360316E00A935A6 /* HomeApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApiManager.swift; sourceTree = "<group>"; };
 		5ECB2E332360318800A935A6 /* MineApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineApiManager.swift; sourceTree = "<group>"; };
@@ -389,7 +389,7 @@
 		5ECB2E2C2360304C00A935A6 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
-				5ECB2E2D2360307200A935A6 /* TProgressHUD.swift */,
+				5ECB2E2D2360307200A935A6 /* Toast.swift */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
@@ -823,7 +823,7 @@
 				5ECB2E2B23602F6100A935A6 /* ImportHeader.swift in Sources */,
 				5ED72C3A2361A9F600726D09 /* DarkModeUtil.swift in Sources */,
 				5ECB2E2023602BCC00A935A6 /* PViewModelType.swift in Sources */,
-				5ECB2E2E2360307200A935A6 /* TProgressHUD.swift in Sources */,
+				5ECB2E2E2360307200A935A6 /* Toast.swift in Sources */,
 				5ECB2E4D23604C4000A935A6 /* MessageRequest.swift in Sources */,
 				5ECB2E342360318800A935A6 /* MineApiManager.swift in Sources */,
 				5EB169152362ED6400251ED5 /* RResult.swift in Sources */,

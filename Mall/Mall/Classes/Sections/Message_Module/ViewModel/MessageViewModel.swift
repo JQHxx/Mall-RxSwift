@@ -56,9 +56,9 @@ extension MessageViewModel: PViewModelType {
                         case let .next(result):
                             let model = MessageModel.init(JSON.init(result))
                             self.messageModels.accept(isReloadData ? model.datas : (self.messageModels.value) + model.datas)
-                            TProgressHUD.showSuccess("加载成功")
+                            Toast.default.showSuccess("加载成功")
                         case let .error(error):
-                            TProgressHUD.showError(error.localizedDescription)
+                            Toast.default.showError(error.localizedDescription)
                         case .completed:
                             output.refreshStatus.accept(isReloadData ? SRefreshStatus.endHeaderRefresh : SRefreshStatus.endFooterRefresh)
                         }
