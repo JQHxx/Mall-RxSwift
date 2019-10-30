@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4035427BCDF3FA7CAA6C24F8 /* Pods_Mall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F13CF82451CC28A041AC716 /* Pods_Mall.framework */; };
 		55CB3E9273A7A3086045AB92 /* Pods_MallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116CB61FB26671EC00F6B28 /* Pods_MallTests.framework */; };
+		5E06E82B2369357900CA39A3 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E06E82A2369357900CA39A3 /* Permissions.swift */; };
 		5EA9CD8C2368108A0064DF4D /* UISegmentedControl+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9CD8B2368108A0064DF4D /* UISegmentedControl+RX.swift */; };
 		5EA9CD8E2368113E0064DF4D /* Array+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9CD8D2368113E0064DF4D /* Array+RX.swift */; };
 		5EA9CD90236817A70064DF4D /* BFDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9CD8F236817A70064DF4D /* BFDateFormatter.swift */; };
@@ -89,6 +90,7 @@
 		2CFC99D00D9A3746A90B110A /* Pods-MallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MallTests.release.xcconfig"; path = "Target Support Files/Pods-MallTests/Pods-MallTests.release.xcconfig"; sourceTree = "<group>"; };
 		35D7DFA06FFC900529E8EDA3 /* Pods-Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mall.release.xcconfig"; path = "Target Support Files/Pods-Mall/Pods-Mall.release.xcconfig"; sourceTree = "<group>"; };
 		417833ABFEF59ED9D54CE139 /* Pods_Mall_MallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mall_MallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E06E82A2369357900CA39A3 /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
 		5EA9CD8B2368108A0064DF4D /* UISegmentedControl+RX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+RX.swift"; sourceTree = "<group>"; };
 		5EA9CD8D2368113E0064DF4D /* Array+RX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RX.swift"; sourceTree = "<group>"; };
 		5EA9CD8F236817A70064DF4D /* BFDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFDateFormatter.swift; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 			children = (
 				66CD3C3D23635F1F00CD875E /* BobValidationService.swift */,
 				5EA9CD8F236817A70064DF4D /* BFDateFormatter.swift */,
+				5E06E82A2369357900CA39A3 /* Permissions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 				5ECB2E322360316E00A935A6 /* HomeApiManager.swift in Sources */,
 				5ED72C2C2361567200726D09 /* MySectionHeader.swift in Sources */,
 				5ED72C282361525800726D09 /* CollectionViewTest1VC.swift in Sources */,
+				5E06E82B2369357900CA39A3 /* Permissions.swift in Sources */,
 				66CD3C3E23635F1F00CD875E /* BobValidationService.swift in Sources */,
 				5ED72C382361A8AB00726D09 /* UIColorDarkMode.swift in Sources */,
 				66CD3C3B23635EDE00CD875E /* UIColor+BobExtension.swift in Sources */,
