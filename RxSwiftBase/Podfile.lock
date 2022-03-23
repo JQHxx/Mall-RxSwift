@@ -1,0 +1,84 @@
+PODS:
+  - Alamofire (4.9.1)
+  - CTMediator (46)
+  - Differentiator (3.1.0)
+  - Kingfisher (4.10.1)
+  - MJRefresh (3.7.5)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Moya/RxSwift (13.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - "NSObject+Rx (4.4.1)":
+    - RxSwift (~> 4.3)
+  - Result (4.1.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.5.0)
+  - SnapKit (4.2.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftyJSON (3.1.4)
+  - SwiftyJSONMappable/Mappable (1.0.3):
+    - SwiftyJSON (~> 3.1.4)
+  - SwiftyJSONMappable/Moya (1.0.3):
+    - Moya
+    - SwiftyJSONMappable/Mappable
+  - SwiftyJSONMappable/RxSwift (1.0.3):
+    - Moya/RxSwift
+    - SwiftyJSONMappable/Moya
+
+DEPENDENCIES:
+  - CTMediator
+  - Kingfisher
+  - MJRefresh
+  - "NSObject+Rx"
+  - RxDataSources
+  - SnapKit
+  - SVProgressHUD
+  - SwiftyJSONMappable/RxSwift
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - CTMediator
+    - Differentiator
+    - Kingfisher
+    - MJRefresh
+    - Moya
+    - "NSObject+Rx"
+    - Result
+    - RxCocoa
+    - RxDataSources
+    - RxSwift
+    - SnapKit
+    - SVProgressHUD
+    - SwiftyJSON
+    - SwiftyJSONMappable
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CTMediator: f1cf58d509fb3192086c367711f039efd769b907
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyJSONMappable: bd493cc2afde0477b3368d6b3c343b85bc8f0e78
+
+PODFILE CHECKSUM: 0e73f79a2e1ae86654562aac09d08a6ca196b7e5
+
+COCOAPODS: 1.11.2

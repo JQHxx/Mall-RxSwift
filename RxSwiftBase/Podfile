@@ -1,0 +1,44 @@
+platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'RxSwiftBase' do
+  
+  pod 'SwiftyJSONMappable/RxSwift'
+  pod 'NSObject+Rx'
+  pod 'SnapKit'
+  pod 'Kingfisher'
+  pod 'CTMediator'
+  pod 'RxDataSources'
+  pod 'MJRefresh'
+  pod 'SVProgressHUD'
+
+  target 'RxSwiftBaseTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'RxSwiftBaseUITests' do
+    # Pods for testing
+  end
+
+end
+
+# 第三方框架 deployment target
+post_install do |installer|
+  # 警告的问题
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '5.0'
+      if config.build_settings['PRODUCT_NAME'] == 'ZCycleView' || config.build_settings['PRODUCT_NAME'] == 'EZSwiftExtensions'
+        config.build_settings['SWIFT_VERSION'] = '4.0'
+      end
+      
+      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f <= 8.0
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+      end
+      
+    end
+  end
+end
