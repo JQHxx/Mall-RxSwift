@@ -35,8 +35,14 @@ class LoginViewModel: TransformViewModelType {
         
         let usernameUsable = input.account.flatMapLatest { account in
             return LoginViewModel.accountValid(account: account)
-
         }
+        
+        /* share(replay:1) 防止重复订阅
+        let usernameable: Observable<Bool> = input.account.asObservable().flatMapLatest({ (account) in
+            return LoginViewModel.testAccountValid(account: account)
+        }).share(replay:1)
+         */
+
         
         let output = LoginViewModel.Output(usernameUsable: usernameUsable)
         return output
@@ -51,6 +57,16 @@ class LoginViewModel: TransformViewModelType {
             result = true
         }
         return Observable.just(result).asDriver(onErrorJustReturn: false)
+    }
+    
+    static func testAccountValid(account: String) -> Observable<Bool> {
+        var result = false
+        if account.count < 6 {
+            
+        } else {
+            result = true
+        }
+        return Observable.just(result)
     }
     
 }
