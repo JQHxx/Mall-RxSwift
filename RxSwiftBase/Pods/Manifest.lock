@@ -21,6 +21,12 @@ PODS:
     - Differentiator (~> 3.0)
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
+  - RxGesture (2.2.0):
+    - RxCocoa (~> 4.5)
+    - RxSwift (~> 4.5)
+  - RxOptional (3.6.2):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
   - RxSwift (4.5.0)
   - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
@@ -33,6 +39,8 @@ PODS:
   - SwiftyJSONMappable/RxSwift (1.0.3):
     - Moya/RxSwift
     - SwiftyJSONMappable/Moya
+  - TYCyclePagerView (1.2.0)
+  - TYPagerController (2.1.2)
 
 DEPENDENCIES:
   - CTMediator
@@ -40,9 +48,13 @@ DEPENDENCIES:
   - MJRefresh
   - "NSObject+Rx"
   - RxDataSources
+  - RxGesture
+  - RxOptional
   - SnapKit
   - SVProgressHUD
   - SwiftyJSONMappable/RxSwift
+  - TYCyclePagerView
+  - TYPagerController
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -56,11 +68,15 @@ SPEC REPOS:
     - Result
     - RxCocoa
     - RxDataSources
+    - RxGesture
+    - RxOptional
     - RxSwift
     - SnapKit
     - SVProgressHUD
     - SwiftyJSON
     - SwiftyJSONMappable
+    - TYCyclePagerView
+    - TYPagerController
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -73,12 +89,16 @@ SPEC CHECKSUMS:
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxGesture: c1b7bf17166b0ef9d642a9510f8bac5785f18990
+  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyJSONMappable: bd493cc2afde0477b3368d6b3c343b85bc8f0e78
+  TYCyclePagerView: 2b051dade0615c70784aa34f40c646feeddb7344
+  TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
 
-PODFILE CHECKSUM: 0e73f79a2e1ae86654562aac09d08a6ca196b7e5
+PODFILE CHECKSUM: 37a97dd3095f00a8aba2622d34de1709b95c7310
 
 COCOAPODS: 1.11.2

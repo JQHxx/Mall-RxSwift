@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         print(API.Home.banner)
     }
 
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let VC = LoginVC()
+        VC.modalPresentationStyle = .fullScreen
+        self.present(VC, animated: true, completion: nil)
+    }
 }
 

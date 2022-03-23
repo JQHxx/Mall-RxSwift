@@ -19,5 +19,7 @@
 @_exported import RxDataSources
 @_exported import MJRefresh
 @_exported import SVProgressHUD
+@_exported import RxGesture
+@_exported import RxOptional
 
 
