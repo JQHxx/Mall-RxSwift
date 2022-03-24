@@ -20,14 +20,14 @@ struct BasePlugin: HttpPlugin {
     let targetType: CustomTargetType
     
     func willSend(_ request: RequestType, target: TargetType) {
-        if targetType.isShowLog {
+        if targetType.isShowPlugLog {
             let requestString = request.request?.url?.absoluteString ?? ""
             debugPrint("request  =>" + requestString)
         }
     }
     
     func didReceive(_ response: Any?, error: Error?) {
-        if targetType.isShowLog {
+        if targetType.isShowPlugLog {
             if let response = response {
                 if let response = response as? Response {
                     debugPrint("response =>" + (String.init(data: response.data, encoding: String.Encoding.utf8) ?? ""))

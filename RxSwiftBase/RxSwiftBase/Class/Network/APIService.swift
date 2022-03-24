@@ -12,6 +12,7 @@ protocol CustomTargetType: TargetType {
     var timeout: TimeInterval { get }
     var isShowHUD: Bool { get }
     var isShowLog: Bool { get }
+    var isShowPlugLog: Bool { get }
 }
 
 extension CustomTargetType {
@@ -29,6 +30,10 @@ extension CustomTargetType {
 #else
         return false
 #endif
+    }
+    
+    var isShowPlugLog: Bool {
+        return false
     }
 }
 

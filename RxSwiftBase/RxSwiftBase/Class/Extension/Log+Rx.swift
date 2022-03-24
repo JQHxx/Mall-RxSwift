@@ -11,31 +11,40 @@ import Foundation
 extension Observable {
     /// 显示HUD
     public func showLog(_ isShow: Bool = false) -> Observable<Element> {
-        self.debug()
         return Observable.create { observer in
-            var isEnd = false
-            // showHUD
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4, execute: {
-                if isEnd == false && isShow {
-                    SVProgressHUD.dismiss()
-                    SVProgressHUD.show()
-                }
-            })
-            
-            let end = {
-                isEnd = true
-                // hideHUD
-                DispatchQueue.main.async {
-                    SVProgressHUD.dismiss()
-                }
-            }
-            
             return self.do(onDispose: {
-                end()
             }).subscribe({ event in
-                end()
                 observer.on(event)
+                Observable.Log.show(with: event, isShowLog: isShow)
             })
+                }
+    }
+    
+    class Log {
+        static func show(with event: Event<Element>, isShowLog: Bool) {
+            switch event {
+            case .next(let response):
+                if isShowLog {
+                    if let response = response as? Response {
+                        debugPrint("request =>" + (response.request?.url?.absoluteString ?? ""))
+                        debugPrint("response =>" + (String.init(data: response.data, encoding: String.Encoding.utf8) ?? ""))
+                    }
+                    
+                    if let response = response as? ProgressResponse {
+                        debugPrint("request =>" + (response.response?.request?.url?.absoluteString ?? ""))
+                        debugPrint("response =>" + (String.init(data: response.response?.data ?? Data(), encoding: String.Encoding.utf8) ?? ""))
+                    }
+                }
+                break
+            case .error(let error):
+                if isShowLog {
+                    debugPrint("error => \(error.localizedDescription)")
+                }
+                break
+            case .completed: break
+            }
         }
     }
 }
+
+

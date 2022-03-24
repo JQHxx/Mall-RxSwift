@@ -8,6 +8,7 @@
 import Foundation
 import Moya
 import Alamofire
+import RxSwift
 
 class NetworkTools {
     
@@ -35,6 +36,7 @@ class NetworkTools {
             let disposable = provider.rx.request(target)
                 .asObservable()
                 .showHUD(target.isShowHUD)
+                .showLog(target.isShowLog)
                 .subscribe { response in
                     plugins.forEach {$0.didReceive(response, error: nil)}
                     single(.success(response))
@@ -75,6 +77,7 @@ class NetworkTools {
             let disposable = provider.rx.requestWithProgress(target)
                 .asObservable()
                 .showHUD(target.isShowHUD)
+                .showLog(target.isShowLog)
                 .subscribe { event in
                     switch event {
                     case .next(let element):
@@ -109,4 +112,5 @@ extension NetworkTools {
         }
         return reach.isReachable
     }
+    
 }
