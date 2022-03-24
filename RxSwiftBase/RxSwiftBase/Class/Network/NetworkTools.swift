@@ -12,7 +12,7 @@ import RxSwift
 
 class NetworkTools {
     
-    static func request<T: CustomTargetType>(with target: T) -> Single<Response> {
+    static func request<T: CustomTargetType>(with target: T, callbackQueue: DispatchQueue? = nil) -> Single<Response> {
         // 检验网络
         if !checkNetWorkStatus() {
             return Single<Response>.create { single in
@@ -33,7 +33,7 @@ class NetworkTools {
         let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
         let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure, plugins: plugins)
         return Single<Response>.create { single in
-            let disposable = provider.rx.request(target)
+            let disposable = provider.rx.request(target, callbackQueue: callbackQueue)
                 .asObservable()
                 .showHUD(target.isShowHUD)
                 .showLog(target.isShowLog)
@@ -52,7 +52,7 @@ class NetworkTools {
         }
     }
     
-    static func requestWithProgress<T: CustomTargetType>(with target: T) -> Observable<ProgressResponse> {
+    static func requestWithProgress<T: CustomTargetType>(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<ProgressResponse> {
         // 检验网络
         if !checkNetWorkStatus() {
             return Observable<ProgressResponse>.create { observable in
@@ -74,7 +74,7 @@ class NetworkTools {
         let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
         let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure)
         return Observable<ProgressResponse>.create { observable in
-            let disposable = provider.rx.requestWithProgress(target)
+            let disposable = provider.rx.requestWithProgress(target, callbackQueue: callbackQueue)
                 .asObservable()
                 .showHUD(target.isShowHUD)
                 .showLog(target.isShowLog)
