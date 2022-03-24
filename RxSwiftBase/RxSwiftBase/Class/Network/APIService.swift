@@ -24,7 +24,11 @@ extension CustomTargetType {
     }
     
     var isShowLog: Bool {
+#if DEBUG
+        return true
+#else
         return false
+#endif
     }
 }
 
@@ -43,26 +47,26 @@ extension APIService: CustomTargetType {
     var baseURL: URL {
         return URL(string: "http://www.weather.com.cn/data/sk/101010100.html")!
     }
-
+    
     var path: String {
         switch self {
         case .testGet:
             return ""
         }
     }
-
+    
     var method: Moya.Method {
         return .get
     }
-
+    
     var parameterEncoding: ParameterEncoding {
         return URLEncoding.default
     }
-
+    
     var sampleData: Data {
         return Data()
     }
-
+    
     var task: Task {
         //return .requestPlain
         return .requestParameters(parameters: ["test": "122"], encoding: URLEncoding.default)
