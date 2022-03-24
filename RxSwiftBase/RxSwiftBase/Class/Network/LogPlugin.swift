@@ -16,7 +16,7 @@ extension HttpPlugin {
     func didReceive(_ response: Any?, error: Error?){}
 }
 
-struct BasePlugin: HttpPlugin {
+struct LogPlugin: HttpPlugin {
     let targetType: CustomTargetType
     
     func willSend(_ request: RequestType, target: TargetType) {
@@ -44,4 +44,5 @@ struct BasePlugin: HttpPlugin {
         }
 
     }
+    
 }

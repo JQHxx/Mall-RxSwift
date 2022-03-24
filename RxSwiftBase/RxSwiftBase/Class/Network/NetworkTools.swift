@@ -30,7 +30,7 @@ class NetworkTools {
                 return
             }
         }
-        let plugins: [HttpPlugin] = [BasePlugin(targetType: target)]
+        let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
         let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure, plugins: plugins)
         return Single<Response>.create { single in
             let disposable = provider.rx.request(target)
@@ -71,7 +71,7 @@ class NetworkTools {
                 return
             }
         }
-        let plugins: [HttpPlugin] = [BasePlugin(targetType: target)]
+        let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
         let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure)
         return Observable<ProgressResponse>.create { observable in
             let disposable = provider.rx.requestWithProgress(target)
