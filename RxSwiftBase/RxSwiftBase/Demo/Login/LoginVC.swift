@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 let countDownSeconds: Int = 60
 
@@ -23,6 +24,9 @@ class LoginVC: UIViewController {
     
     deinit {
         debugPrint("deinit")
+        if disposable != nil {
+            disposable?.dispose()
+        }
     }
     
     // MARK: - Private methods
@@ -30,8 +34,8 @@ class LoginVC: UIViewController {
         view.backgroundColor = UIColor.white
         view.addSubview(self.accoutTextField)
         view.addSubview(self.passwordTextField)
-        //view.addSubview(self.codeTextField)
-        //view.addSubview(self.codeButton)
+        view.addSubview(self.codeTextField)
+        view.addSubview(self.codeButton)
         view.addSubview(self.loginButton)
         
         self.accoutTextField.snp.makeConstraints { make in
@@ -48,7 +52,6 @@ class LoginVC: UIViewController {
             make.height.equalTo(40)
         }
         
-        /*
         self.codeTextField.snp.makeConstraints { make in
             make.top.equalTo(self.passwordTextField.snp_bottom).offset(15)
             make.left.equalTo(self.accoutTextField)
@@ -63,10 +66,10 @@ class LoginVC: UIViewController {
         }
         self.codeButton.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: NSLayoutConstraint.Axis.horizontal)
         self.codeTextField.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: NSLayoutConstraint.Axis.horizontal)
-         */
+        
 
         self.loginButton.snp.makeConstraints { make in
-            make.top.equalTo(self.passwordTextField.snp_bottom).offset(15)
+            make.top.equalTo(self.codeTextField.snp_bottom).offset(15)
             make.left.equalTo(self.accoutTextField)
             make.right.equalTo(self.accoutTextField)
             make.height.equalTo(40)
@@ -89,48 +92,64 @@ class LoginVC: UIViewController {
             
         }).disposed(by: rx.disposeBag)
         
+        /*
         self.loginButton.rx.controlEvent(UIControlEvents.touchUpInside).subscribe(onNext: { [weak self] in
             guard let `self` = self else { return }
             debugPrint(self)
             self.dismiss(animated: true, completion: nil)
         }).disposed(by: rx.disposeBag)
+         */
 
         
-        /*
         //按钮点击响应
         self.loginButton.rx.tap
          .throttle(0.1, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
                 guard let `self` = self else { return }
                 debugPrint(self)
+                self.disposable?.dispose()
+                self.codeButton.isEnabled = true
+                self.codeButton.setTitleColor(UIColor.white, for: .normal)
+                self.codeButton.setTitle("重新获取", for: .normal)
                 //self.dismiss(animated: true, completion: nil)
             })
             .disposed(by: rx.disposeBag)
-
-        // warning: - 怎么立即销毁定时任务
-        // 获取验证码倒计时
-        let timer = Observable<Int>.timer(0, period: 1, scheduler: MainScheduler.instance)
-           .map{countDownSeconds - $0}
-           .filter{ $0 >= 0 }
-           .asDriver(onErrorJustReturn: 0)
         
-        
-        let second = codeButton.rx.tap
-            .flatMapLatest { _ -> Driver<Int> in
-                return timer
-        }
-        let sendCodeButtonText = second.map { $0 == 0 ? " 发送验证码 ":" 再次发送(\($0)s) "}
-        let sendButtonEnable = second.map{$0 == 0 ? true : false}
-        
-        sendCodeButtonText
-            .bind(to: codeButton.rx.title(for: .normal))
+        self.codeButton.rx.tap
+         .throttle(0.1, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                guard let `self` = self else { return }
+                debugPrint(self)
+                self.getSmsCode()
+            })
             .disposed(by: rx.disposeBag)
         
-        sendButtonEnable
-            .bind(to: codeButton.rx.isEnabled)
-            .disposed(by: rx.disposeBag)
-         */
     }
+    
+    // 获取验证码
+    func getSmsCode() {
+        self.disposable?.dispose()
+        self.disposable = Observable<Int>.timer(0, period: 1, scheduler: MainScheduler.instance).map { $0 + 1 }
+        .map { countDownSeconds - $0 }
+        .do(onNext: {  [weak self] (element) in
+            guard let `self` = self else { return }
+            if element == 0 {
+                self.disposable?.dispose()
+                self.codeButton.isEnabled = true
+                self.codeButton.titleLabel?.text = "重新获取"
+                self.codeButton.setTitleColor(UIColor.orange, for: .normal)
+                self.codeButton.setTitle("重新获取", for: .normal)
+            } else {
+                self.codeButton.isEnabled = false
+            }
+        })
+            .subscribe(onNext: { [weak self] (element) in
+                guard let `self` = self else { return }
+                self.codeButton.titleLabel?.text = "\(element)秒后"
+                self.codeButton.setTitleColor(UIColor.lightGray, for: .normal)
+                self.codeButton.setTitle("\(element)秒后", for: .normal)
+            })
+            }
     
     // MARK: - Setter & Getter
     private lazy var accoutTextField: UITextField = {
@@ -172,4 +191,7 @@ class LoginVC: UIViewController {
     
     var vm: LoginViewModel = LoginViewModel()
     var vmOutput: LoginViewModel.Output?
+    
+    // 定时器只能通过这个取消
+    var disposable: Disposable?
 }
