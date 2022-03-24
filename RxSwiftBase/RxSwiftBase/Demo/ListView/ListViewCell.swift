@@ -8,7 +8,16 @@
 import UIKit
 
 class ListViewCell: UITableViewCell {
+    
+    private(set) var disposeBag = DisposeBag()
 
+    // Cell重用，disposeBag要重新声明
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.disposeBag = DisposeBag()
+
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
