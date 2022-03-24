@@ -8,25 +8,46 @@
 import Foundation
 
 /* -------------------------- 网络测试 ------------------ */
+protocol CustomTargetType: TargetType {
+    var timeout: TimeInterval { get }
+    var isShowHUD: Bool { get }
+    var isShowLog: Bool { get }
+}
+
+extension CustomTargetType {
+    var timeout: TimeInterval {
+        return 15.0
+    }
+    
+    var isShowHUD: Bool {
+        return true
+    }
+    
+    var isShowLog: Bool {
+        return false
+    }
+}
 
 enum APIService {
     case testGet
 }
 
-extension APIService: TargetType {
+extension APIService: CustomTargetType {
     var headers: [String : String]? {
-        nil
+        var header = [String: String]()
+        header["Content-Type"] = "application/x-www-form-urlencoded"
+        //header["Content-Type"] = "application/json;charset=UTF-8"
+        return header
     }
     
-
     var baseURL: URL {
-        return URL(string: "https://httpbin.org/")!
+        return URL(string: "http://www.weather.com.cn/data/sk/101010100.html")!
     }
 
     var path: String {
         switch self {
         case .testGet:
-            return "get"
+            return ""
         }
     }
 
@@ -34,19 +55,17 @@ extension APIService: TargetType {
         return .get
     }
 
-    var parameters: [String: Any]? {
-        return nil
-    }
-
     var parameterEncoding: ParameterEncoding {
         return URLEncoding.default
     }
 
     var sampleData: Data {
-        return "".data(using: .utf8)!
+        return Data()
     }
 
     var task: Task {
-        return .requestPlain
+        //return .requestPlain
+        return .requestParameters(parameters: ["test": "122"], encoding: URLEncoding.default)
     }
+    
 }

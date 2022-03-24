@@ -15,6 +15,7 @@ enum NetworkError: Error, CustomStringConvertible {
     case noData
     case error(Error)
     case code(Int)
+    case networkError
 
     var description: String {
         switch self {
@@ -28,6 +29,8 @@ enum NetworkError: Error, CustomStringConvertible {
             return err.localizedDescription
         case .code(let code):
             return "\(code) Error"
+        case .networkError:
+            return "Network Error"
         }
     }
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		87B35AE03B6AE5F6926910F2 /* Pods_RxSwiftBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D455010FF1A00408409401F /* Pods_RxSwiftBase.framework */; };
+		A0060A0627EC0B1C000949BA /* HUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0060A0527EC0B1C000949BA /* HUD+Rx.swift */; };
+		A0060A0827EC0D06000949BA /* HttpBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0060A0727EC0D06000949BA /* HttpBin.swift */; };
+		A0060A0A27EC4472000949BA /* Log+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0060A0927EC4472000949BA /* Log+Rx.swift */; };
+		A0060A0C27EC4A36000949BA /* BasePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0060A0B27EC4A36000949BA /* BasePlugin.swift */; };
 		A054921927EAAD1C00CE5262 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054921827EAAD1C00CE5262 /* AppDelegate.swift */; };
 		A054921D27EAAD1C00CE5262 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054921C27EAAD1C00CE5262 /* ViewController.swift */; };
 		A054922027EAAD1C00CE5262 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A054921E27EAAD1C00CE5262 /* Main.storyboard */; };
@@ -60,6 +64,10 @@
 		73EEFBB8A35E152121F144FA /* Pods-RxSwiftBaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftBaseTests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftBaseTests/Pods-RxSwiftBaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C2F713817EDDA719CC51959 /* Pods-RxSwiftBase-RxSwiftBaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftBase-RxSwiftBaseUITests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftBase-RxSwiftBaseUITests/Pods-RxSwiftBase-RxSwiftBaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		833809AEA7E0478DBD7A9C1E /* Pods-RxSwiftBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftBase.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftBase/Pods-RxSwiftBase.release.xcconfig"; sourceTree = "<group>"; };
+		A0060A0527EC0B1C000949BA /* HUD+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Rx.swift"; sourceTree = "<group>"; };
+		A0060A0727EC0D06000949BA /* HttpBin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpBin.swift; sourceTree = "<group>"; };
+		A0060A0927EC4472000949BA /* Log+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+Rx.swift"; sourceTree = "<group>"; };
+		A0060A0B27EC4A36000949BA /* BasePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePlugin.swift; sourceTree = "<group>"; };
 		A054921527EAAD1C00CE5262 /* RxSwiftBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A054921827EAAD1C00CE5262 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A054921C27EAAD1C00CE5262 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +232,8 @@
 				A054925127EAB23900CE5262 /* SMappable.swift */,
 				A054925327EAB2F700CE5262 /* API.swift */,
 				A054925D27EACA4800CE5262 /* NetworkError.swift */,
+				A0060A0727EC0D06000949BA /* HttpBin.swift */,
+				A0060A0B27EC4A36000949BA /* BasePlugin.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -232,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				A054925A27EABA7900CE5262 /* UILabel+Rx.swift */,
+				A0060A0527EC0B1C000949BA /* HUD+Rx.swift */,
+				A0060A0927EC4472000949BA /* Log+Rx.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -523,8 +535,10 @@
 				A054926727EACEC300CE5262 /* SListVC.swift in Sources */,
 				A054926327EACE9E00CE5262 /* ListVC.swift in Sources */,
 				A054924E27EAB04B00CE5262 /* NetworkTools.swift in Sources */,
+				A0060A0827EC0D06000949BA /* HttpBin.swift in Sources */,
 				A054925827EAB8C100CE5262 /* SubjectViewModelType.swift in Sources */,
 				A054925B27EABA7900CE5262 /* UILabel+Rx.swift in Sources */,
+				A0060A0A27EC4472000949BA /* Log+Rx.swift in Sources */,
 				A054925227EAB23900CE5262 /* SMappable.swift in Sources */,
 				A054925027EAB1DB00CE5262 /* APIService.swift in Sources */,
 				A054926927EACF7C00CE5262 /* ListViewCell.swift in Sources */,
@@ -535,6 +549,8 @@
 				A054925627EAB80100CE5262 /* TransformViewModelType.swift in Sources */,
 				A054924C27EAAEF400CE5262 /* RxBase.swift in Sources */,
 				A054921927EAAD1C00CE5262 /* AppDelegate.swift in Sources */,
+				A0060A0627EC0B1C000949BA /* HUD+Rx.swift in Sources */,
+				A0060A0C27EC4A36000949BA /* BasePlugin.swift in Sources */,
 				A054925E27EACA4800CE5262 /* NetworkError.swift in Sources */,
 				A054925427EAB2F700CE5262 /* API.swift in Sources */,
 			);
