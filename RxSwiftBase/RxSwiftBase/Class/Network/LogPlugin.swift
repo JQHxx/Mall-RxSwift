@@ -32,12 +32,16 @@ struct LogPlugin: HttpPlugin {
 #if DEBUG
         if targetType.isShowPlugLog {
             if let response = response {
+                var data: Data?
                 if let response = response as? Response {
-                    debugPrint("Response =>" + (String.init(data: response.data, encoding: String.Encoding.utf8) ?? ""))
+                    data = response.data
                 }
                 
                 if let response = response as? ProgressResponse {
-                    debugPrint("ProgressResponse =>" + (String.init(data: response.response?.data ?? Data(), encoding: String.Encoding.utf8) ?? ""))
+                    data = response.response?.data
+                }
+                if let data = data {
+                    debugPrint("Response =>" + (String.init(data: data, encoding: String.Encoding.utf8) ?? ""))
                 }
             }
             
