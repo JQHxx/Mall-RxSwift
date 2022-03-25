@@ -86,6 +86,8 @@ extension Observable {
                 throw NetworkError.noData
             }
             
+            debugPrint(String.init(data: data, encoding: String.Encoding.utf8) ?? "")
+            
             if type is Codable {
                 do {
                     let decoder = JSONDecoder()

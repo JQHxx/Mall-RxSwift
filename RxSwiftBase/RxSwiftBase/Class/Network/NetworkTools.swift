@@ -12,11 +12,11 @@ import RxSwift
 
 struct NetworkTools<T: CustomTargetType> {
         
-    static func request(with target: T, callbackQueue: DispatchQueue? = nil) -> Single<Response> {
+    static func request(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<Response> {
         // 检验网络
         if !checkNetWorkStatus() {
-            return Single<Response>.create { single in
-                single(.error(NetworkError.networkError))
+            return Observable<Response>.create { observer in
+                observer.onError(NetworkError.networkError)
                 return Disposables.create {}
             }
         }
@@ -24,24 +24,30 @@ struct NetworkTools<T: CustomTargetType> {
         let requestTimeoutClosure = requestTimeoutClosure(with: target)
         let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
         let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure, plugins: plugins)
-        return Single<Response>.create { single in
+        var single = Observable<Response>.create { observer in
             let disposable = provider.rx.request(target, callbackQueue: callbackQueue)
                 .asObservable()
                 .showHUD(target.isShowHUD)
                 .showLog(target.isShowLog)
                 .subscribe { response in
                     plugins.forEach {$0.didReceive(response, error: nil)}
-                    single(.success(response))
+                    observer.onNext(response)
+                    observer.onCompleted()
                 } onError: { error in
                     if (error as NSError).code != NSURLErrorCancelled {
                         plugins.forEach {$0.didReceive(nil, error: error)}
-                        single(.error(error))
+                        observer.onError(error)
                     }
                 }
             return Disposables.create {
                 disposable.dispose()
             }
         }
+        
+        if target.retry > 0 {
+            single = single.retry(target.retry)
+        }
+        return single.share(replay: 1, scope: .forever)
     }
     
     static func requestWithProgress(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<ProgressResponse> {
@@ -57,7 +63,7 @@ struct NetworkTools<T: CustomTargetType> {
         let requestTimeoutClosure = requestTimeoutClosure(with: target)
         let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
         let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure)
-        return Observable<ProgressResponse>.create { observable in
+        var single = Observable<ProgressResponse>.create { observable in
             let disposable = provider.rx.requestWithProgress(target, callbackQueue: callbackQueue)
                 .asObservable()
                 .showHUD(target.isShowHUD)
@@ -84,6 +90,10 @@ struct NetworkTools<T: CustomTargetType> {
                 disposable.dispose()
             }
         }
+        if target.retry > 0 {
+            single = single.retry(target.retry)
+        }
+        return single.share(replay: 1, scope: .forever)
     }
 }
 

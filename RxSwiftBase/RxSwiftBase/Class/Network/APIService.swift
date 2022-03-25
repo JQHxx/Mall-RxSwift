@@ -15,8 +15,9 @@ protocol CustomTargetType: TargetType {
     var isShowHUD: Bool { get }
     var isShowLog: Bool { get }
     var isShowPlugLog: Bool { get }
+    var retry: Int { get }
     
-    func request(callbackQueue: DispatchQueue?) -> Single<Response>
+    func request(callbackQueue: DispatchQueue?) -> Observable<Response>
     func requestWithProgress(callbackQueue: DispatchQueue?) -> Observable<ProgressResponse>
 }
 
@@ -41,7 +42,11 @@ extension CustomTargetType {
         return false
     }
     
-    func request(callbackQueue: DispatchQueue? = nil) -> Single<Response> {
+    var retry: Int {
+        return 0
+    }
+    
+    func request(callbackQueue: DispatchQueue? = nil) -> Observable<Response> {
         return NetworkTools.request(with: self, callbackQueue: callbackQueue)
     }
     
@@ -65,7 +70,8 @@ extension APIService: CustomTargetType {
     }
     
     var baseURL: URL {
-        return URL(string: "http://www.weather.com.cn/data/sk/101010100.html")!
+        return URL(string: "test")!
+        //return URL(string: "http://www.weather.com.cn/data/sk/101010100.html")!
     }
     
     var path: String {
