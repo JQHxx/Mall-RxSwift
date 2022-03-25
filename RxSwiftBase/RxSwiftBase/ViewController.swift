@@ -36,7 +36,6 @@ class ViewController: UIViewController {
          */
 
 
-        /*
         APIService.testGet.request()
             .asObservable()
             .mapObject(type: SWeatherinfoModel.self)
@@ -46,7 +45,6 @@ class ViewController: UIViewController {
             } onError: { error in
                 debugPrint(error.localizedDescription)
             }.disposed(by: rx.disposeBag)
-         */
         
     }
 }

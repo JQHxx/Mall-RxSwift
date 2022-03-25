@@ -19,15 +19,6 @@ extension HttpPlugin {
 struct LogPlugin: HttpPlugin {
     let targetType: CustomTargetType
     
-    /*
-     func willSend(_ request: RequestType, target: TargetType) {
-     if targetType.isShowPlugLog {
-     let requestString = request.request?.url?.absoluteString ?? ""
-     debugPrint("request  =>" + requestString)
-     }
-     }
-     */
-    
     func didReceive(_ response: Any?, error: Error?) {
 #if DEBUG
         if targetType.isShowPlugLog {
