@@ -21,15 +21,7 @@ struct NetworkTools<T: CustomTargetType> {
             }
         }
         //设置请求超时时间
-        let requestTimeoutClosure = { (endpoint: Endpoint, done: @escaping MoyaProvider<T>.RequestResultClosure) in
-            do {
-                var request = try endpoint.urlRequest()
-                request.timeoutInterval = target.timeout
-                done(.success(request))
-            } catch {
-                return
-            }
-        }
+        let requestTimeoutClosure = requestTimeoutClosure(with: target)
         let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
         let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure, plugins: plugins)
         return Single<Response>.create { single in
@@ -62,15 +54,7 @@ struct NetworkTools<T: CustomTargetType> {
         }
         
         // 设置请求超时时间
-        let requestTimeoutClosure = { (endpoint: Endpoint, done: @escaping MoyaProvider<T>.RequestResultClosure) in
-            do {
-                var request = try endpoint.urlRequest()
-                request.timeoutInterval = target.timeout
-                done(.success(request))
-            } catch {
-                return
-            }
-        }
+        let requestTimeoutClosure = requestTimeoutClosure(with: target)
         let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
         let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure)
         return Observable<ProgressResponse>.create { observable in
@@ -100,7 +84,26 @@ struct NetworkTools<T: CustomTargetType> {
                 disposable.dispose()
             }
         }
+    }
+}
 
+extension NetworkTools {
+    // MARK: - 设置请求超时时间
+    private static func requestTimeoutClosure(with target: T) -> MoyaProvider<T>.RequestClosure{
+        let requestTimeoutClosure = { (endpoint:Endpoint, closure: @escaping MoyaProvider<T>.RequestResultClosure) in
+            do {
+                var urlRequest = try endpoint.urlRequest()
+                urlRequest.timeoutInterval = target.timeout //设置请求超时时间
+                closure(.success(urlRequest))
+            } catch MoyaError.requestMapping(let url) {
+                closure(.failure(MoyaError.requestMapping(url)))
+            } catch MoyaError.parameterEncoding(let error) {
+                closure(.failure(MoyaError.parameterEncoding(error)))
+            } catch {
+                closure(.failure(MoyaError.underlying(error, nil)))
+            }
+        }
+        return requestTimeoutClosure
     }
 }
 
