@@ -8,7 +8,8 @@
 import Foundation
 import SwiftyJSONMappable
 
-public protocol SMappable: JSONMappable {
-    
+public protocol SMappable: JSONMappable & Codable {
+
 }
+
 

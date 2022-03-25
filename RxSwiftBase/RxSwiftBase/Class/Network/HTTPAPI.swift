@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct API {
+struct HTTPAPI {
     static let server: String = "https://httpbin.org/"
     
     struct Home {

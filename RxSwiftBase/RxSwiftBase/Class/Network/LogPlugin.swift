@@ -19,14 +19,17 @@ extension HttpPlugin {
 struct LogPlugin: HttpPlugin {
     let targetType: CustomTargetType
     
-    func willSend(_ request: RequestType, target: TargetType) {
-        if targetType.isShowPlugLog {
-            let requestString = request.request?.url?.absoluteString ?? ""
-            debugPrint("request  =>" + requestString)
-        }
-    }
+    /*
+     func willSend(_ request: RequestType, target: TargetType) {
+     if targetType.isShowPlugLog {
+     let requestString = request.request?.url?.absoluteString ?? ""
+     debugPrint("request  =>" + requestString)
+     }
+     }
+     */
     
     func didReceive(_ response: Any?, error: Error?) {
+#if DEBUG
         if targetType.isShowPlugLog {
             if let response = response {
                 if let response = response as? Response {
@@ -42,7 +45,28 @@ struct LogPlugin: HttpPlugin {
                 debugPrint("error => \(error.localizedDescription)")
             }
         }
-
+#endif
+        
+    }
+    
+    
+    func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
+#if DEBUG
+        if let body = request.httpBody,
+           let str = String(data: body, encoding: .utf8) {
+            if targetType.isShowPlugLog {
+                print("body: \(request)")
+                print("request to send: \(str)")
+            }
+        }
+#endif
+        return request
+    }
+    
+    func willSend(_ request: RequestType, target: TargetType) {
+#if DEBUG
+        print("---REQUEST: \(String(describing: request.request))")
+#endif
     }
     
 }

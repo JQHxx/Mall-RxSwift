@@ -10,9 +10,9 @@ import Moya
 import Alamofire
 import RxSwift
 
-class NetworkTools {
-    
-    static func request<T: CustomTargetType>(with target: T, callbackQueue: DispatchQueue? = nil) -> Single<Response> {
+struct NetworkTools<T: CustomTargetType> {
+        
+    static func request(with target: T, callbackQueue: DispatchQueue? = nil) -> Single<Response> {
         // 检验网络
         if !checkNetWorkStatus() {
             return Single<Response>.create { single in
@@ -52,7 +52,7 @@ class NetworkTools {
         }
     }
     
-    static func requestWithProgress<T: CustomTargetType>(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<ProgressResponse> {
+    static func requestWithProgress(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<ProgressResponse> {
         // 检验网络
         if !checkNetWorkStatus() {
             return Observable<ProgressResponse>.create { observable in

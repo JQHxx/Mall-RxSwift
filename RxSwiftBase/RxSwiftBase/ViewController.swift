@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(API.Home.banner)
+        print(HTTPAPI.Home.banner)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -27,9 +27,11 @@ class ViewController: UIViewController {
          */
 
         NetworkTools.request(with: APIService.testGet)
+            .asObservable()
+            .mapObject(type: SWeatherinfoModel.self)
             .subscribe { response in
-                debugPrint(response)
-                debugPrint(String.init(data: response.data, encoding: String.Encoding.utf8) ?? "")
+                //debugPrint(response.mapString() ?? "")
+                //debugPrint(String.init(data: response.data, encoding: String.Encoding.utf8) ?? "")
             } onError: { error in
                 debugPrint(error.localizedDescription)
             }.disposed(by: rx.disposeBag)
