@@ -50,51 +50,6 @@ struct NetworkTools<T: CustomTargetType> {
         return single.share(replay: 1, scope: .forever)
     }
     
-    static func requestWithProgress(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<ProgressResponse> {
-        // 检验网络
-        if !checkNetWorkStatus() {
-            return Observable<ProgressResponse>.create { observable in
-                observable.onError(NetworkError.networkError)
-                return Disposables.create {}
-            }
-        }
-        
-        // 设置请求超时时间
-        let requestTimeoutClosure = requestTimeoutClosure(with: target)
-        let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
-        let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure)
-        var single = Observable<ProgressResponse>.create { observable in
-            let disposable = provider.rx.requestWithProgress(target, callbackQueue: callbackQueue)
-                .asObservable()
-                .showHUD(target.isShowHUD)
-                .showLog(target.isShowLog)
-                .subscribe { event in
-                    switch event {
-                    case .next(let element):
-                        plugins.forEach {$0.didReceive(element, error: nil)}
-                        observable.onNext(element)
-                        break
-                    case .error(let error):
-                        if (error as NSError).code != NSURLErrorCancelled {
-                            plugins.forEach {$0.didReceive(nil, error: error)}
-                            observable.onError(error)
-                        }
-                        break
-                    case .completed:
-                        observable.onCompleted()
-                        break
-                    }
-
-                }
-            return Disposables.create {
-                disposable.dispose()
-            }
-        }
-        if target.retry > 0 {
-            single = single.retry(target.retry)
-        }
-        return single.share(replay: 1, scope: .forever)
-    }
 }
 
 extension NetworkTools {

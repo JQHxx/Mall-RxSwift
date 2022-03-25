@@ -11,6 +11,8 @@ import Moya
 
 class ViewController: UIViewController {
     
+    private let provider = MoyaProvider<APIService>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(HTTPAPI.Home.banner)
@@ -37,14 +39,14 @@ class ViewController: UIViewController {
 
 
         APIService.testGet.request()
-            .asObservable()
             .mapObject(type: SWeatherinfoModel.self)
             .subscribe { response in
-                debugPrint(response.mapString() ?? "")
+                //debugPrint(response.mapString() ?? "")
                 //debugPrint(String.init(data: response.data, encoding: String.Encoding.utf8) ?? "")
             } onError: { error in
                 debugPrint(error.localizedDescription)
             }.disposed(by: rx.disposeBag)
+        
         
     }
 }

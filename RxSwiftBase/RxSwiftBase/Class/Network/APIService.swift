@@ -18,7 +18,6 @@ protocol CustomTargetType: TargetType {
     var retry: Int { get }
     
     func request(callbackQueue: DispatchQueue?) -> Observable<Response>
-    func requestWithProgress(callbackQueue: DispatchQueue?) -> Observable<ProgressResponse>
 }
 
 extension CustomTargetType {
@@ -50,10 +49,6 @@ extension CustomTargetType {
         return NetworkTools.request(with: self, callbackQueue: callbackQueue)
     }
     
-    func requestWithProgress(callbackQueue: DispatchQueue? = nil) -> Observable<ProgressResponse> {
-        return NetworkTools.requestWithProgress(with: self, callbackQueue: callbackQueue)
-    }
-    
 }
 
 enum APIService {
@@ -70,8 +65,8 @@ extension APIService: CustomTargetType {
     }
     
     var baseURL: URL {
-        return URL(string: "test")!
-        //return URL(string: "http://www.weather.com.cn/data/sk/101010100.html")!
+        ///return URL(string: "test")!
+        return URL(string: "http://www.weather.com.cn/data/sk/101010100.html")!
     }
     
     var path: String {
