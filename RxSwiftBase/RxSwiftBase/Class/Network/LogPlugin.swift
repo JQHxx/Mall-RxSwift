@@ -33,16 +33,16 @@ struct LogPlugin: HttpPlugin {
         if targetType.isShowPlugLog {
             if let response = response {
                 if let response = response as? Response {
-                    debugPrint("response =>" + (String.init(data: response.data, encoding: String.Encoding.utf8) ?? ""))
+                    debugPrint("Response =>" + (String.init(data: response.data, encoding: String.Encoding.utf8) ?? ""))
                 }
                 
                 if let response = response as? ProgressResponse {
-                    debugPrint("response =>" + (String.init(data: response.response?.data ?? Data(), encoding: String.Encoding.utf8) ?? ""))
+                    debugPrint("ProgressResponse =>" + (String.init(data: response.response?.data ?? Data(), encoding: String.Encoding.utf8) ?? ""))
                 }
             }
             
             if let error = error {
-                debugPrint("error => \(error.localizedDescription)")
+                debugPrint("ERROR => \(error.localizedDescription)")
             }
         }
 #endif
@@ -55,8 +55,8 @@ struct LogPlugin: HttpPlugin {
         if let body = request.httpBody,
            let str = String(data: body, encoding: .utf8) {
             if targetType.isShowPlugLog {
-                print("body: \(request)")
-                print("request to send: \(str)")
+                print("REQUEST body: \(request)")
+                print("REQUEST to send: \(str)")
             }
         }
 #endif
@@ -65,7 +65,10 @@ struct LogPlugin: HttpPlugin {
     
     func willSend(_ request: RequestType, target: TargetType) {
 #if DEBUG
-        print("---REQUEST: \(String(describing: request.request))")
+        guard let request = request.request else {
+            return
+        }
+        print("---REQUEST: \(String(describing: request))")
 #endif
     }
     
