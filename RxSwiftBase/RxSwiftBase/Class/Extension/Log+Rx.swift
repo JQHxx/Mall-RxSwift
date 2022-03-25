@@ -15,7 +15,9 @@ extension Observable {
             return self.do(onDispose: {
             }).subscribe({ event in
                 observer.on(event)
-                Observable.Log.show(with: event, isShowLog: isShow)
+                if isShow {
+                    Observable.Log.show(with: event, isShowLog: isShow)
+                }
             })
                 }
     }
@@ -25,15 +27,23 @@ extension Observable {
             switch event {
             case .next(let response):
                 if isShowLog {
+                    var requestString: String?
+                    var data: Data?
                     if let response = response as? Response {
-                        debugPrint("request =>" + (response.request?.url?.absoluteString ?? ""))
-                        debugPrint("response =>" + (String.init(data: response.data, encoding: String.Encoding.utf8) ?? ""))
+                        requestString = String(describing: response.request)
+                        data = response.data
                     }
                     
                     if let response = response as? ProgressResponse {
-                        debugPrint("request =>" + (response.response?.request?.url?.absoluteString ?? ""))
-                        debugPrint("response =>" + (String.init(data: response.response?.data ?? Data(), encoding: String.Encoding.utf8) ?? ""))
+                        requestString = String(describing: response.response?.request)
+                        data = response.response?.data
                     }
+                    guard let data = data, let requestString = requestString else {
+                        return
+                    }
+                    
+                    debugPrint("request =>" + requestString)
+                    debugPrint("response =>" + (String.init(data: data, encoding: String.Encoding.utf8) ?? ""))
                 }
                 break
             case .error(let error):
