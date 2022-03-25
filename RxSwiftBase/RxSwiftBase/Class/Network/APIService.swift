@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import RxSwift
+import Moya
 
 /* -------------------------- 网络测试 ------------------ */
 protocol CustomTargetType: TargetType {
@@ -13,6 +15,9 @@ protocol CustomTargetType: TargetType {
     var isShowHUD: Bool { get }
     var isShowLog: Bool { get }
     var isShowPlugLog: Bool { get }
+    
+    func request(callbackQueue: DispatchQueue?) -> Single<Response>
+    func requestWithProgress(callbackQueue: DispatchQueue?) -> Observable<ProgressResponse>
 }
 
 extension CustomTargetType {
@@ -35,10 +40,20 @@ extension CustomTargetType {
     var isShowPlugLog: Bool {
         return false
     }
+    
+    func request(callbackQueue: DispatchQueue? = nil) -> Single<Response> {
+        return NetworkTools.request(with: self, callbackQueue: callbackQueue)
+    }
+    
+    func requestWithProgress(callbackQueue: DispatchQueue? = nil) -> Observable<ProgressResponse> {
+        return NetworkTools.requestWithProgress(with: self, callbackQueue: callbackQueue)
+    }
+    
 }
 
 enum APIService {
     case testGet
+    case testPost(params: [String: Any])
 }
 
 extension APIService: CustomTargetType {
@@ -56,6 +71,8 @@ extension APIService: CustomTargetType {
     var path: String {
         switch self {
         case .testGet:
+            return ""
+        case .testPost(_):
             return ""
         }
     }
