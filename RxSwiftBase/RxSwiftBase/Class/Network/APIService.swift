@@ -18,6 +18,7 @@ protocol CustomTargetType: TargetType {
     var retry: Int { get }
     
     func request(callbackQueue: DispatchQueue?) -> Observable<Response>
+    func requestWithProgress(callbackQueue: DispatchQueue?) -> Observable<ProgressResponse>
 }
 
 extension CustomTargetType {
@@ -47,6 +48,10 @@ extension CustomTargetType {
     
     func request(callbackQueue: DispatchQueue? = nil) -> Observable<Response> {
         return NetworkTools.request(with: self, callbackQueue: callbackQueue)
+    }
+
+    func requestWithProgress(callbackQueue: DispatchQueue? = nil) -> Observable<ProgressResponse> {
+        return NetworkTools.requestWithProgress(with: self, callbackQueue: callbackQueue)
     }
     
 }
