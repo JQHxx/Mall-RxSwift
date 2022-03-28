@@ -26,7 +26,7 @@ enum NetworkError: Error, CustomStringConvertible {
         case .responseError:
             return "Response Error"
         case .error(let err):
-            return err.localizedDescription
+            return "\(err.localizedDescription)"
         case .code(let code):
             return "\(code) Error"
         case .networkError:

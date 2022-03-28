@@ -34,9 +34,9 @@ extension Observable {
                         data = response.data
                     }
                     
-                    if let response = response as? ProgressResponse {
-                        requestString = String(describing: response.response?.request)
-                        data = response.response?.data
+                    if let progressResponse = response as? ProgressResponse, let response = progressResponse.response {
+                        requestString = String(describing: response.request)
+                        data = response.data
                     }
                     guard let data = data, let requestString = requestString else {
                         return

@@ -28,8 +28,8 @@ struct LogPlugin: HttpPlugin {
                     data = response.data
                 }
                 
-                if let response = response as? ProgressResponse {
-                    data = response.response?.data
+                if let progressResponse = response as? ProgressResponse, let response = progressResponse.response {
+                    data = response.data
                 }
                 if let data = data {
                     debugPrint("Response =>" + (String.init(data: data, encoding: String.Encoding.utf8) ?? ""))

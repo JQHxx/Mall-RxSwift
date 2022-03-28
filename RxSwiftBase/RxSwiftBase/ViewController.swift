@@ -38,15 +38,40 @@ class ViewController: UIViewController {
          */
 
 
+        /*
         APIService.testGet.requestWithProgress()
-            //.mapObject(type: SWeatherinfoModel.self)
+            .filterCompleted()
+            .mapObject(type: SWeatherinfoModel.self)
             .subscribe { response in
+                debugPrint(response.mapString() ?? "")
+                /*
                 if let response = response.response {
                     debugPrint(String.init(data: response.data, encoding: String.Encoding.utf8) ?? "")
                 } else {
                     debugPrint(response.progress)
 
                 }
+                 */
+
+            } onError: { error in
+                debugPrint(error.localizedDescription)
+            }.disposed(by: rx.disposeBag)
+         */
+        
+        APIService.testGet.requestWithProgress()
+            .filterCompleted()
+            //.map(SWeatherinfoModel.self)
+            .mapObject(type: SWeatherinfoModel.self)
+            .subscribe { response in
+                debugPrint(response.mapString() ?? "")
+                /*
+                if let response = response.response {
+                    debugPrint(String.init(data: response.data, encoding: String.Encoding.utf8) ?? "")
+                } else {
+                    debugPrint(response.progress)
+
+                }
+                 */
 
             } onError: { error in
                 debugPrint(error.localizedDescription)

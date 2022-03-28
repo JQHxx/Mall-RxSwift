@@ -12,7 +12,7 @@
 		A0060A0A27EC4472000949BA /* Log+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0060A0927EC4472000949BA /* Log+Rx.swift */; };
 		A0060A0C27EC4A36000949BA /* LogPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0060A0B27EC4A36000949BA /* LogPlugin.swift */; };
 		A00D708127ED4F4600CFE301 /* NBaseDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00D708027ED4F4600CFE301 /* NBaseDataResponse.swift */; };
-		A00D708327ED556D00CFE301 /* Map+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00D708227ED556D00CFE301 /* Map+Rx.swift */; };
+		A00D708327ED556D00CFE301 /* SwiftyJSON+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00D708227ED556D00CFE301 /* SwiftyJSON+Rx.swift */; };
 		A00D708627ED5D0100CFE301 /* SWeatherinfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00D708527ED5D0100CFE301 /* SWeatherinfoModel.swift */; };
 		A054921927EAAD1C00CE5262 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054921827EAAD1C00CE5262 /* AppDelegate.swift */; };
 		A054921D27EAAD1C00CE5262 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054921C27EAAD1C00CE5262 /* ViewController.swift */; };
@@ -37,6 +37,7 @@
 		A054926927EACF7C00CE5262 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054926827EACF7C00CE5262 /* ListViewCell.swift */; };
 		A054926C27EAEA8900CE5262 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054926B27EAEA8900CE5262 /* LoginVC.swift */; };
 		A054926E27EAEAA400CE5262 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054926D27EAEAA400CE5262 /* LoginViewModel.swift */; };
+		A08F7E9327F146810090A8D4 /* Response+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F7E9227F146810090A8D4 /* Response+Rx.swift */; };
 		A840BC371EDABF6025C11FA7 /* Pods_RxSwiftBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD33B3B1606E66D9B350B812 /* Pods_RxSwiftBaseTests.framework */; };
 		D71CDC05FA723FA838C0DDB7 /* Pods_RxSwiftBase_RxSwiftBaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4BEBC1E0F68ECCDA205E4F /* Pods_RxSwiftBase_RxSwiftBaseUITests.framework */; };
 /* End PBXBuildFile section */
@@ -70,7 +71,7 @@
 		A0060A0927EC4472000949BA /* Log+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+Rx.swift"; sourceTree = "<group>"; };
 		A0060A0B27EC4A36000949BA /* LogPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPlugin.swift; sourceTree = "<group>"; };
 		A00D708027ED4F4600CFE301 /* NBaseDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBaseDataResponse.swift; sourceTree = "<group>"; };
-		A00D708227ED556D00CFE301 /* Map+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map+Rx.swift"; sourceTree = "<group>"; };
+		A00D708227ED556D00CFE301 /* SwiftyJSON+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftyJSON+Rx.swift"; sourceTree = "<group>"; };
 		A00D708527ED5D0100CFE301 /* SWeatherinfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWeatherinfoModel.swift; sourceTree = "<group>"; };
 		A054921527EAAD1C00CE5262 /* RxSwiftBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A054921827EAAD1C00CE5262 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 		A054926827EACF7C00CE5262 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		A054926B27EAEA8900CE5262 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		A054926D27EAEAA400CE5262 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A08F7E9227F146810090A8D4 /* Response+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+Rx.swift"; sourceTree = "<group>"; };
 		AD33B3B1606E66D9B350B812 /* Pods_RxSwiftBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F9047CA3CE64E3355019FA /* Pods-RxSwiftBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftBase.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftBase/Pods-RxSwiftBase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -256,7 +258,8 @@
 				A054925A27EABA7900CE5262 /* UILabel+Rx.swift */,
 				A0060A0527EC0B1C000949BA /* HUD+Rx.swift */,
 				A0060A0927EC4472000949BA /* Log+Rx.swift */,
-				A00D708227ED556D00CFE301 /* Map+Rx.swift */,
+				A00D708227ED556D00CFE301 /* SwiftyJSON+Rx.swift */,
+				A08F7E9227F146810090A8D4 /* Response+Rx.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -549,11 +552,12 @@
 				A054926727EACEC300CE5262 /* SListVC.swift in Sources */,
 				A00D708627ED5D0100CFE301 /* SWeatherinfoModel.swift in Sources */,
 				A054926327EACE9E00CE5262 /* ListVC.swift in Sources */,
-				A00D708327ED556D00CFE301 /* Map+Rx.swift in Sources */,
+				A00D708327ED556D00CFE301 /* SwiftyJSON+Rx.swift in Sources */,
 				A054924E27EAB04B00CE5262 /* NetworkTools.swift in Sources */,
 				A054925827EAB8C100CE5262 /* SubjectViewModelType.swift in Sources */,
 				A054925B27EABA7900CE5262 /* UILabel+Rx.swift in Sources */,
 				A0060A0A27EC4472000949BA /* Log+Rx.swift in Sources */,
+				A08F7E9327F146810090A8D4 /* Response+Rx.swift in Sources */,
 				A054925227EAB23900CE5262 /* SMappable.swift in Sources */,
 				A054925027EAB1DB00CE5262 /* APIService.swift in Sources */,
 				A054926927EACF7C00CE5262 /* ListViewCell.swift in Sources */,
