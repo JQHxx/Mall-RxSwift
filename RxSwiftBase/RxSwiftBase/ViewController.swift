@@ -86,7 +86,7 @@ class ViewController: UIViewController {
             //.map(SWeatherinfoModel.self)
             .mapObject(type: SWeatherinfoModel.self)
             .subscribe { response in
-                debugPrint(response.mapString() ?? "")
+                debugPrint(response.mapJSON())
                 /*
                 if let response = response.response {
                     debugPrint(String.init(data: response.data, encoding: String.Encoding.utf8) ?? "")

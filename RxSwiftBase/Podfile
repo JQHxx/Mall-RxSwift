@@ -17,6 +17,7 @@ target 'RxSwiftBase' do
   pod 'RxOptional'
   pod 'TYPagerController'
   pod 'TYCyclePagerView'
+  pod 'IQKeyboardManagerSwift'
 
   target 'RxSwiftBaseTests' do
     inherit! :search_paths

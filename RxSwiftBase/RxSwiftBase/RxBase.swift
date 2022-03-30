@@ -21,5 +21,6 @@
 @_exported import SVProgressHUD
 @_exported import RxGesture
 @_exported import RxOptional
+@_exported import IQKeyboardManagerSwift
 
 

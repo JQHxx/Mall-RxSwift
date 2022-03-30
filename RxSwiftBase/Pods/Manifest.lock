@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.9.1)
   - CTMediator (46)
   - Differentiator (3.1.0)
+  - IQKeyboardManagerSwift (6.5.9)
   - Kingfisher (4.10.1)
   - MJRefresh (3.7.5)
   - Moya (13.0.1):
@@ -44,6 +45,7 @@ PODS:
 
 DEPENDENCIES:
   - CTMediator
+  - IQKeyboardManagerSwift
   - Kingfisher
   - MJRefresh
   - "NSObject+Rx"
@@ -61,6 +63,7 @@ SPEC REPOS:
     - Alamofire
     - CTMediator
     - Differentiator
+    - IQKeyboardManagerSwift
     - Kingfisher
     - MJRefresh
     - Moya
@@ -82,6 +85,7 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   CTMediator: f1cf58d509fb3192086c367711f039efd769b907
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
@@ -99,6 +103,6 @@ SPEC CHECKSUMS:
   TYCyclePagerView: 2b051dade0615c70784aa34f40c646feeddb7344
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
 
-PODFILE CHECKSUM: 37a97dd3095f00a8aba2622d34de1709b95c7310
+PODFILE CHECKSUM: 51cdd72c1cfdd2742227496d2aef95b435881ac2
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.11.2
