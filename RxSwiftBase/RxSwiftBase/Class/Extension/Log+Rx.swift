@@ -16,7 +16,7 @@ extension Observable {
             }).subscribe({ event in
                 observer.on(event)
                 if isShow {
-                    Observable.Log.show(with: event, isShowLog: isShow)
+                    Log.show(with: event, isShowLog: isShow)
                 }
             })
                 }
