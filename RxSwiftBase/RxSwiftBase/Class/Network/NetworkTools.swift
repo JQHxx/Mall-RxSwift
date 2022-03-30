@@ -11,7 +11,7 @@ import Alamofire
 import RxSwift
 
 struct NetworkTools<T: CustomTargetType> {
-
+    // 普通的网络请求
     static func request(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<Response> {
         // 检验网络
         if !checkNetWorkStatus() {
@@ -49,12 +49,10 @@ struct NetworkTools<T: CustomTargetType> {
         }
         return single.share(replay: 1, scope: .forever)
     }
-    
 }
 
-
 extension NetworkTools {
-
+    // 带进度的请求
     static func requestWithProgress(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<ProgressResponse> {
         // 检验网络
         if !checkNetWorkStatus() {
@@ -64,8 +62,7 @@ extension NetworkTools {
             }
         }
 
-
-        //设置请求超时时间
+        // 设置请求超时时间
         let requestTimeoutClosure = requestTimeoutClosure(with: target)
         let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
         let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure, plugins: plugins)
@@ -90,7 +87,6 @@ extension NetworkTools {
                         observable.onCompleted()
                         break
                     }
-
                 }
             return Disposables.create {
                 disposable.dispose()
@@ -100,7 +96,6 @@ extension NetworkTools {
             single = single.retry(target.retry)
         }
         return single.share(replay: 1, scope: .forever)
-
     }
 }
 
@@ -132,5 +127,4 @@ extension NetworkTools {
         }
         return reach.isReachable
     }
-    
 }
