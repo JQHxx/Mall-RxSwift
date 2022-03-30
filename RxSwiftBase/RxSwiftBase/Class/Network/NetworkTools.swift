@@ -12,10 +12,10 @@ import RxSwift
 
 struct NetworkTools<T: CustomTargetType> {
     // 普通的网络请求
-    static func request(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<Response> {
+    static func request(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<Moya.Response> {
         // 检验网络
         if !checkNetWorkStatus() {
-            return Observable<Response>.create { observer in
+            return Observable<Moya.Response>.create { observer in
                 observer.onError(NetworkError.networkError)
                 return Disposables.create {}
             }
@@ -24,7 +24,7 @@ struct NetworkTools<T: CustomTargetType> {
         let requestTimeoutClosure = requestTimeoutClosure(with: target)
         let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
         let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure, plugins: plugins)
-        var single = Observable<Response>.create { observer in
+        var single = Observable<Moya.Response>.create { observer in
             let disposable = provider.rx.request(target, callbackQueue: callbackQueue)
                 .asObservable()
                 .showHUD(target.isShowHUD)
@@ -53,10 +53,10 @@ struct NetworkTools<T: CustomTargetType> {
 
 extension NetworkTools {
     // 带进度的请求
-    static func requestWithProgress(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<ProgressResponse> {
+    static func requestWithProgress(with target: T, callbackQueue: DispatchQueue? = nil) -> Observable<Moya.ProgressResponse> {
         // 检验网络
         if !checkNetWorkStatus() {
-            return Observable<ProgressResponse>.create { observable in
+            return Observable<Moya.ProgressResponse>.create { observable in
                 observable.onError(NetworkError.networkError)
                 return Disposables.create {}
             }
@@ -66,7 +66,7 @@ extension NetworkTools {
         let requestTimeoutClosure = requestTimeoutClosure(with: target)
         let plugins: [HttpPlugin] = [LogPlugin(targetType: target)]
         let provider = MoyaProvider<T>(requestClosure: requestTimeoutClosure, plugins: plugins)
-        var single = Observable<ProgressResponse>.create { observable in
+        var single = Observable<Moya.ProgressResponse>.create { observable in
             let disposable = provider.rx.requestWithProgress(target, callbackQueue: callbackQueue)
                 .asObservable()
                 .showHUD(target.isShowHUD)
