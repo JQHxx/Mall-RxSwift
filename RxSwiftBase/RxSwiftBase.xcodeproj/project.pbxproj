@@ -38,6 +38,7 @@
 		A054926C27EAEA8900CE5262 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054926B27EAEA8900CE5262 /* LoginVC.swift */; };
 		A054926E27EAEAA400CE5262 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054926D27EAEAA400CE5262 /* LoginViewModel.swift */; };
 		A08F7E9327F146810090A8D4 /* Response+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F7E9227F146810090A8D4 /* Response+Rx.swift */; };
+		A0D05AF3289B604900FEE8B1 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D05AF2289B604900FEE8B1 /* ReusableView.swift */; };
 		A840BC371EDABF6025C11FA7 /* Pods_RxSwiftBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD33B3B1606E66D9B350B812 /* Pods_RxSwiftBaseTests.framework */; };
 		D71CDC05FA723FA838C0DDB7 /* Pods_RxSwiftBase_RxSwiftBaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4BEBC1E0F68ECCDA205E4F /* Pods_RxSwiftBase_RxSwiftBaseUITests.framework */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,7 @@
 		A054926B27EAEA8900CE5262 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		A054926D27EAEAA400CE5262 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A08F7E9227F146810090A8D4 /* Response+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+Rx.swift"; sourceTree = "<group>"; };
+		A0D05AF2289B604900FEE8B1 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		AD33B3B1606E66D9B350B812 /* Pods_RxSwiftBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F9047CA3CE64E3355019FA /* Pods-RxSwiftBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftBase.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftBase/Pods-RxSwiftBase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,6 +269,7 @@
 		A054925C27EAC87900CE5262 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				A0D05AF1289B603900FEE8B1 /* Extension */,
 				A00D708427ED5CF600CFE301 /* Model */,
 				A054926A27EAEA7600CE5262 /* Login */,
 				A054926127EACE5D00CE5262 /* SListView */,
@@ -308,6 +311,14 @@
 				A054926D27EAEAA400CE5262 /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		A0D05AF1289B603900FEE8B1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A0D05AF2289B604900FEE8B1 /* ReusableView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,6 +571,7 @@
 				A08F7E9327F146810090A8D4 /* Response+Rx.swift in Sources */,
 				A054925227EAB23900CE5262 /* SMappable.swift in Sources */,
 				A054925027EAB1DB00CE5262 /* APIService.swift in Sources */,
+				A0D05AF3289B604900FEE8B1 /* ReusableView.swift in Sources */,
 				A054926927EACF7C00CE5262 /* ListViewCell.swift in Sources */,
 				A054926527EACEB000CE5262 /* CLVC.swift in Sources */,
 				A054921D27EAAD1C00CE5262 /* ViewController.swift in Sources */,
